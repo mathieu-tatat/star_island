@@ -1,0 +1,562 @@
+*{
+    font-family: 'Iceland', cursive;
+    color:antiquewhite ;
+}
+
+/* premiere partie de la page avec le carousel qui donne les 3 visuels */
+.fondIndex{
+    
+    height:100vh;
+    margin-top: -50px;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%,rgba(255,255,255,0) 75%,rgb(19, 19, 19) 100%),url("../upload/gta_decors5.png");    
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#131313',GradientType=0 ); /* IE6-9 */
+}   
+
+.fondIndexBas{
+    background-image: linear-gradient(to bottom, rgb(19, 19, 19) 5%,rgba(19,19,19,0.75) 25%,rgba(255,255,255,0) 100%),url("../upload/gta_decors2.png");
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#131313', endColorstr='#03ffffff',GradientType=0 ); /* IE6-9 */
+    height:100vh;
+    background-repeat: no-repeat;
+    padding-top:3%;
+    padding-bottom: 3%
+}
+
+.titleIndex{
+    font-size: 60px;
+    display: flex;
+    margin: auto;
+    width: 40%;
+    text-align: center;
+    padding-top: 5%;
+    line-height: normal;
+}
+
+.txtIndex{
+    font-size: 25px;
+    display: flex;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    padding-top: 5%;
+    line-height: normal;
+}
+
+.btnCarousel{
+    height: 20px;
+    display: flex;
+    justify-content: space-around;
+    width: 10%;
+    margin: auto;
+    position: absolute;
+    top: 41rem;
+    left: 45%;
+}
+
+.point1{
+    width: 20px;
+    height: auto;
+    background-color: rgba(255, 127, 80, 0);
+    border-radius: 50px;
+    border: solid 3px #ea4c6f;
+}
+.point2{
+    width: 20px;
+    height: auto;
+    background-color: rgba(255, 127, 80, 0);
+    border-radius: 50px;
+    border: solid 3px #ea4c6f;
+}
+.point3{
+    width: 20px;
+    height: auto;
+    background-color: rgba(255, 127, 80, 0);
+    border-radius: 50px;
+    border: solid 3px #ea4c6f;
+}
+
+
+.carousel {
+    width: 100%;
+    text-align: center;
+    display: block;
+  }
+  .carousel .page {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    transition: transform 0.5s;
+    transform: scale(0);
+  }
+  .carousel .page div {
+    padding: 3em;
+  }
+  .carousel .page label {
+    cursor: pointer;
+    background: #d9ff4f;
+    padding: 1em 2em;
+  }
+
+  .carousel #page1cb:checked ~ #page1 {
+    transform: scale(1);
+  }
+
+  .carousel #page2cb:checked ~ #page2 {
+    transform: scale(1);
+  }
+
+  .carousel #page3cb:checked ~ #page3 {
+    transform: scale(1);
+  }
+
+  .page1cb{
+    position: absolute;
+    top: 30rem;
+    left: 47.5%;
+    display: none;   
+  }
+
+  #page2cb{
+    position: absolute;
+    top: 30rem;
+    left :49.5%;
+    display: none;   
+  }
+
+  #page3cb{
+    position: absolute;
+    top: 30rem;
+    left: 51.5%;
+    display: none;   
+
+  }
+
+
+  
+  
+
+
+  /* carousel defilement d'images page 2 */
+  #galCarousel {
+    position: relative;
+    height: 500px;
+    width: 80%;
+    top: 70%;
+    transform: translateY(0%); 
+    overflow: hidden;
+    margin: auto;
+    
+  }
+  
+  #galCarousel div {
+    position: absolute;
+    transition: transform 1s, left 1s, opacity 1s, z-index 0s;
+    opacity: 1;
+  }
+  
+  #galCarousel div img {
+    width: 700px;
+    transition: width 1s;
+    height: 450px;
+    object-fit: contain;
+  }
+  
+  #galCarousel div.hideLeft {
+    left: 0%;
+    opacity: 0;
+    transform: translateY(50%) translateX(-50%);
+  }
+  
+  #galCarousel div.hideLeft img {
+    width: 200px;
+  }
+  
+  #galCarousel div.hideRight {
+    left: 100%;
+    opacity: 0;
+    transform: translateY(50%) translateX(-50%);
+  }
+  
+  #galCarousel div.hideRight img {
+    width: 200px;
+  }
+  
+  #galCarousel div.prev {
+    z-index: 5;
+    left: 26%;
+    transform: translateY(0%) translateX(-50%);
+  }
+  
+  #galCarousel div.prev img {
+    width: 300px;
+  }
+  
+  #galCarousel div.prevLeftSecond {
+    z-index: 4;
+    left: 15%;
+    transform: translateY(0%) translateX(-50%);
+    opacity: 0.7;
+  }
+  
+  #galCarousel div.prevLeftSecond img {
+    width: 200px;
+  }
+  
+  #galCarousel div.selected {
+    z-index: 10;
+    left: 50%;
+    transform: translateY(0%) translateX(-50%);
+  }
+  
+  #galCarousel div.next {
+    z-index: 5;
+    left: 74%;
+    transform: translateY(0%) translateX(-50%);
+  }
+  
+  #galCarousel div.next img {
+    width: 300px;
+  }
+  
+  #galCarousel div.nextRightSecond {
+    z-index: 4;
+    left: 85%;
+    transform: translateY(0%) translateX(-50%);
+    opacity: 0.7;
+  }
+  
+  #galCarousel div.nextRightSecond img {
+    width: 200px;
+  }
+  
+  .buttons {
+    position: fixed;
+    left: 50%;
+    top: 28rem;
+    transform: translateX(-50%);
+    bottom: 10px;
+    border: none;
+    background-color: transparent;
+
+  }
+  
+  #prev{
+    transform: rotate(180deg);
+    border: none;
+    background-color: transparent;
+    font-size: 30px;
+    color: #ffffff;
+    padding-right: 6px;
+    padding-top: 5px;
+
+  }
+
+  #next{
+    border: none;
+    background-color: transparent;
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: bolder;
+    padding-left: 20px;
+
+  }
+
+  /* 3eme partie de la page accueil avec l'onglet top server */
+
+  .containTopServer{
+    width: 50%;
+    margin: auto;
+    height: auto;
+    background-color: #f2f4f01f;
+    border: solid 1px black;
+    border-radius: 10px;
+    margin-top: 12%;
+    padding:2% !important;
+  }
+
+  .serveurTitle{
+    color: black;
+    font-size: 50px;
+    width: 90%;
+    margin-left: -50%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  }
+
+  input {
+    display: none;
+  }
+   
+  .etoile {
+    color: grey;
+    font-size: 3em;
+    cursor: pointer;
+  }
+   
+  .gold {
+    color: gold;
+  }
+   
+  .grey {
+    color: rgb(128, 128, 128);
+  }
+   
+  .black {
+    color: black;
+  }
+
+
+  #msg{
+    color: black;
+    border-radius: 10px;
+    width: 70%;
+    display: flex;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+  .validerCom{
+    color: black;
+    border-radius: 10px;
+    border: solid 1px black;
+    padding: 5px;
+    background-color: #fdfdfd;
+    width: 12%;
+    margin: auto;
+
+  }
+
+  .formCom{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 2% !important;
+  }
+
+  .headFormTopServeur{
+    display: flex;
+    flex-direction: row;
+    padding: 0% !important ;
+    justify-content: center;
+    align-items: center;
+  }
+  .logoServeur{
+    width: 20%;
+    margin-right: 30%;
+  }
+
+  /* partie basse de la page accueil qui gere les commentaires  */
+
+
+  .containCommentaires{
+    width: 60%;
+    margin: auto;
+    height: auto;
+    background-color: #f2f4f01f;
+    border: solid 1px black;
+    border-radius: 10px;
+    margin-top: 40px
+  }
+
+  .headFormCommentaires{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .commentTitle{
+    color: black;
+    font-size: 50px;
+    width: 60%;
+    text-align: center;
+    margin:auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  }
+  input {
+    display: none;
+  }
+   
+  .avis{
+    color: grey;
+    font-size: 3em;
+    cursor: pointer;
+  }
+   
+  .or {
+    color: gold;
+  }
+   
+  .gris {
+    color: grey;
+  }
+   
+  .noir {
+    color: black;
+  }
+
+  .formComment{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 2% !important;
+    justify-content: center;
+  }
+
+  .validerAvis{
+    color: black;
+    border-radius: 10px;
+    border: solid 1px black;
+    padding: 5px;
+    background-color: rgba(250, 235, 215, 0.6);
+    width: 12%;
+    margin: auto;
+  }
+
+  .formAvisCommentaires{
+    display: flex;
+    justify-content: center;
+  }
+  #com{
+    color: black;
+    border-radius: 10px;
+    width: 70%;
+    display: flex;
+    margin: auto;
+    margin-bottom: 10px;
+    background-color:rgba(250, 235, 215, 0.6);
+    border: 1px solid black;
+  }
+
+  .leftCom{
+    width: 45%;
+    height:90px;
+    background-color: rgba(250, 235, 215, 0.6);
+    color: black;
+    border-radius: 30px 30px 0px 30px;
+    border: 1px black solid;
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+  }
+
+
+  .rightCom{
+    width: 45%;
+    height:90px;
+    background-color: rgba(250, 235, 215, 0.6);
+    color: black;
+    border-radius: 30px 30px 30px 0px;
+    border: 1px black solid;
+    margin-top: 2px;
+    margin-left:55% ;
+    display: flex;
+    align-items: center;
+  }
+
+  .displayComments{
+    overflow-y: hidden;
+    overflow-x: hidden;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap :10px;
+    margin-left: 25%;
+    margin-top: -5%;
+   
+  }
+
+  .imgComAvatarLeft{
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    border: solid 3px #ea4c6f;
+    align-items: center;
+    display: flex;
+    margin-left: 10px;
+  }
+
+  .imgComAvatarRight{
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    border: solid 3px #ea4c6f;
+    align-items: center;
+    display: flex;
+    margin-right: 10px;
+  }
+
+  .formPostedLeft{
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: start;
+    margin-left: 15px;
+  }
+
+  .formPostedRight{
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: end;
+    margin-right: 15px;
+  }
+
+
+  input {
+    display: none;
+  }
+   
+  .avis1{
+    color: grey;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-left: 15px;
+
+  }
+   
+  .shine {
+    color: gold;
+  }
+   
+  .cloud {
+    color: grey;
+  }
+   
+  .dark {
+    color: black;
+  }
+
+  .policePostLeft{
+    color: black;
+    width: 80%;
+    margin-left: 15px;
+    margin-top: 10px;
+    overflow: scroll;
+    overflow: hidden;
+    font-size: 20px;
+  }
+  .datePostLeft{
+    color: rgb(84, 82, 82) ;
+    margin-left: 15px;
+    width: 80%;
+
+  }
+
+  .policePostRight{
+    color: black;
+    width: 80%;
+    margin-right: -20px;
+    margin-top: 10px;
+    overflow: scroll;
+    overflow: hidden;
+    font-size: 20px;
+  }
+  .datePostRight{
+    color: rgb(84, 82, 82) ;
+    margin-right: -80px;
+    width: 80%;
+
+  }

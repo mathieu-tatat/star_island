@@ -356,9 +356,9 @@ media queries format mobile
     }
 
     .drop{
-        width: 50px;
-        padding: 2px
-        
+        width: 40px;
+        padding: 2px;
+        height:45px;
     }
 
     .discordLogo{

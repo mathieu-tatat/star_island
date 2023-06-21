@@ -45,6 +45,17 @@
 .nav-item{
     margin-right: 4rem !important;
 }
+
+footer{
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.logoFooter{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    margin-right: 10px;
+}
 /*
 media queries format mobile
 */
@@ -63,9 +74,8 @@ media queries format mobile
         left: 24.3%;
         align-items: inherit;
         top:0%;
-        height: 100vh;
-        padding-top:15%;
-
+        height: 96.8vh;
+        padding-top:20%;
     }
 
     #burger{
@@ -82,12 +92,13 @@ media queries format mobile
     }
     
     #outLink{
-        display: flex;
-        flex-direction: column;
-        align-items:start;
-        position: fixed;
-        left:5%;
-        z-index: 4;
+            position: absolute;
+            left: 70%;
+            top: 90vh;    
+    }
+    #buttonBurger{
+        position: relative;
+        top: 20%;
     }
 }
 

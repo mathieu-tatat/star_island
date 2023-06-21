@@ -94,3 +94,19 @@
 </main> 
 </body>
 </html>
+
+
+
+
+
+<main class="container">
+    <?php     if (isset($_SESSION['messages']) && !empty($_SESSION['messages'])):?>
+    <?php     foreach ($_SESSION['messages'] as $type=>$messages):
+      ?>
+    <?php     foreach ($messages as $key=>$message):           ?>
+    <div class="alert alert-<?=  $type; ?> text-center w-50 mx-auto">
+        <p><?=  $message; ?></p>
+    </div>
+
+    {# <?php   unset($_SESSION['messages'][$type][$key]);
+            endforeach;  endforeach;  endif;           ?> #}

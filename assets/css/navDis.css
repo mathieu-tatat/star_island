@@ -1,0 +1,132 @@
+.barDown{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    margin: auto;
+    gap: 10px;
+    align-items: center;
+    position: fixed;
+    left: 35%;
+    top:89%;
+    border-radius: 35px;
+    height: 50px;
+    opacity:1.5;
+    z-index: 20;
+   
+} 
+
+.barDown:hover{
+    box-shadow: rgba(237, 222, 14, 0.55) 0px 0px 30px;
+    opacity:1.5;
+    animation-name: flash;
+    animation-duration: 3s; 
+    background-color: rgba(34, 37, 37, 0.217);
+}
+
+.drop{
+    height: 50px;
+}
+
+section{
+    width: 100%;
+    position: relative;
+    top:-19.5px;
+    float: Left;
+    display: none !important;
+    opacity:1.5;
+    animation-name: slide;
+    animation-duration: 3s; 
+    justify-content: space-between;
+    align-items: center ;
+}
+
+span{
+    position: relative;
+    top:20px;
+}
+
+div:hover section{
+    display: flex!important;
+}
+
+div:hover .barDown{
+    display: flex;
+}
+
+@keyframes slide {
+    0%{opacity: 1;}
+    100%{opacity: 1;}
+    
+}
+
+@keyframes flash {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+    
+}
+
+
+.discordLogo{
+    position: relative;
+    left:1px;
+    top: 5px;
+}
+
+.leftSocials{
+position: relative;
+left: -1px;
+}
+
+.rightSocials{
+position: relative;
+left: 6px;
+}
+
+@media only screen and (min-device-width : 350px) and (max-device-width : 801px) {
+    
+    .barDown {
+        width: 100%;
+        margin: auto;
+        gap: 2px;
+        left: 0%;
+        top: 92%;
+        height: 40px;
+    }
+    .discord{
+        width: 70px;
+    }
+
+    .drop{
+        width: 40px;
+        padding: 2px;
+        height:45px;
+    }
+
+    .discordLogo{
+        position: relative;
+        left:-3px;
+        top: 3px;
+    }
+    
+    .leftSocials{
+    position: relative;
+    left: 5px;
+    }
+    
+    .rightSocials{
+    position: relative;
+    left: 5px;
+    }
+
+    section{   
+        display: block;
+    }
+
+    .barDown:hover{
+        animation-name: none;
+        animation-duration: 0s;
+        box-shadow: rgba(255, 255, 255, 0) 0px 0px 30px;
+        background-color: rgba(34, 37, 37, 0);
+    }
+
+}

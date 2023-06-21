@@ -8,6 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title> 
     <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/navDis.css">
+    <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/bootstrap/scss/bootstrap.css">
     <link rel="icon" href="assets/upload/starisland.png" type="icon star'island">
     <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/">
@@ -24,7 +26,7 @@
     <div class="container-fluid">
     <a href="<?=  BASE_PATH; ?>"><img id="logoIsland" src="assets/upload/starisland.png" alt=""></a>           
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon">
+            <span id="buttonBurger" class="navbar-toggler-icon">
                 <img id="burger" src="assets/upload/noun-menu.png" alt="">
             </span>
         </button>
@@ -75,14 +77,3 @@
     </div>
 </nav>
 </header>
-<main class="container">
-    <?php     if (isset($_SESSION['messages']) && !empty($_SESSION['messages'])):           ?>
-    <?php     foreach ($_SESSION['messages'] as $type=>$messages):
-      ?>
-    <?php     foreach ($messages as $key=>$message):           ?>
-    <div class="alert alert-<?=  $type; ?> text-center w-50 mx-auto">
-        <p><?=  $message; ?></p>
-    </div>
-
-    <?php   unset($_SESSION['messages'][$type][$key]);
-            endforeach;  endforeach;  endif;           ?>
