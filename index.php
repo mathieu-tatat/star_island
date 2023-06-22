@@ -45,39 +45,39 @@
                 <div id="galCarousel">  
 
                     <div class="hideLeft">
-                    <img src="assets/upload/wallpaper3.png">
+                    <img src="<?=  BASE_PATH; ?>assets/upload/wallpaper3.png">
                     </div>
 
                     <div class="hideLeft">
-                    <img src="assets/upload/gta_decors5.png">
+                    <img src="<?=  BASE_PATH; ?>assets/upload/gta_decors5.png">
                     </div>
 
                     <div class="prevLeftSecond">
-                    <img src="assets/upload/gta_decors2.png">
+                    <img src="<?=  BASE_PATH; ?>assets/upload/gta_decors2.png">
                     </div>
 
                     <div class="prev">
-                    <img src="assets/upload/wallpaper3.png">
+                    <img src="<?=  BASE_PATH; ?>assets/upload/wallpaper3.png">
                     </div>
 
                     <div class="selected">
-                    <img src="assets/upload/Loading1.png">
+                    <img src="<?=  BASE_PATH; ?>assets/upload/Loading1.png">
                     </div>
 
                     <div class="next">
-                    <img src="assets/upload/Loading4.png">
+                    <img src="<?=  BASE_PATH; ?>assets/upload/Loading4.png">
                     </div>
 
                     <div class="nextRightSecond">
-                    <img src="assets/upload/Wallpaper1.png">
+                    <img src="<?=  BASE_PATH; ?>assets/upload/Wallpaper1.png">
                     </div>
 
                     <div class="hideRight">
-                    <img src="assets/upload/Wallpaper2.png">
+                    <img src="<?=  BASE_PATH; ?>assets/upload/Wallpaper2.png">
                     </div>
 
                     <div class="hideRight">
-                    <img src="assets/upload/Loading4.png">
+                    <img src="<?=  BASE_PATH; ?>assets/upload/Loading4.png">
                     </div>
 
                 </div>
@@ -248,7 +248,7 @@
 
     </div>
 
-    <script src="assets/js/index.js"></script>
+    <script src="<?=  BASE_PATH; ?>assets/js/index.js" defer ></script>
 
 </main>
 

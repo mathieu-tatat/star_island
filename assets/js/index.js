@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function() {
     var point1 = document.querySelector('.point1');
     var point2 = document.querySelector('.point2');
@@ -42,13 +43,15 @@ document.addEventListener('DOMContentLoaded', function() {
         point2.style.backgroundColor = 'transparent'
       }
     });
-  });
-  
+ 
 
+    
+     
 
-//  fonction defilemment carousel
+$(document).ready(function(){
+  //  fonction defilemment carousel
   function moveToSelected(element) {
-
+  
     if (element == "next") {
       var selected = $(".selected").next();
     } else if (element == "prev") {
@@ -103,7 +106,9 @@ document.addEventListener('DOMContentLoaded', function() {
     moveToSelected('next');
     });
     
-    
+  
+  });
+  
 
     // function notation etoiles 
     let note = 0;
@@ -200,3 +205,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
     });
+  
+  });
+
+
+  

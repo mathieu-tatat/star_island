@@ -63,8 +63,8 @@ media queries format mobile
 @media only screen and (min-device-width : 350px) and (max-device-width : 801px) {
   
     #logoIsland{
-        width:33%;
-        z-index: 1;
+        width:40%;
+        z-index: 21;
     }   
 
     #ulNav{
@@ -75,14 +75,15 @@ media queries format mobile
         align-items: inherit;
         top:0%;
         height: 96.8vh;
-        padding-top:20%;
+        padding-top:24%;
+        z-index: 20;
     }
 
     #burger{
         width: 100%;
         position: relative;
         top: 20px;
-        z-index: 1;
+        z-index: 21;
       }
     
       #navbarColor01{
@@ -100,5 +101,13 @@ media queries format mobile
         position: relative;
         top: 20%;
     }
+
+    .hideLogo{
+        display: none;
+    }
+
+    .logoFooter {
+        height: 60px;
+      }
 }
 

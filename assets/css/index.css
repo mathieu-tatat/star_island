@@ -558,5 +558,145 @@
     color: rgb(84, 82, 82) ;
     margin-right: -80px;
     width: 80%;
-
   }
+
+
+  /* ############# MOBILE media queries  */
+
+  @media only screen and (min-device-width : 350px) and (max-device-width : 640px) {
+    
+    .fondIndex{
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%,rgba(255,255,255,0) 75%,rgb(19, 19, 19) 100%),url("../upload/gta_decors5.png");    
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#131313',GradientType=0 ); /* IE6-9 */
+      background-size: cover;
+      background-position-X: center;
+    }
+
+    .fondIndexBas{
+      padding-top:3%;
+      padding-bottom: 3%
+    }
+
+    .titleIndex {
+      font-size: 45px;
+      width: 70%;
+      padding-top: 15%;
+    }
+
+    .txtIndex{
+      font-size: 20px;
+      width: 90%;
+      margin-top: 10%;
+      background-color: #3c3b3985;
+      border-radius: 10px;
+      padding: 5px;
+    }
+
+    .btnCarousel {
+      height: 15px;
+      width: 22%;
+      top: 36rem;
+      left: 38.2%;
+      gap: 18px;
+    }
+
+    #galCarousel {
+      height: 430px;
+      width: 92%;
+    }
+
+    #galCarousel div img {
+      width: 380px;
+      transition: width 1s;
+      height: 280px;
+      object-fit: contain;
+    }
+
+    .buttons {
+      left: 49%;
+      top: 20rem;
+    }
+
+    .containTopServer {
+      width: 95%;
+      margin-top: 20%;
+    }
+    .etoile {
+      font-size: 2em;
+    }
+    #msg {
+      width: 90%;
+    }
+
+    .validerCom{
+      width: 20%;
+    }
+
+    .logoServeur {
+      width: 23%;
+    }
+
+    .serveurTitle {
+      font-size: 40px;
+      width: 95%;
+    }
+
+    .displayComments {
+      width: 95%;
+      gap: 10px;
+      margin: auto;
+    }
+
+    .leftCom {
+      width: 80%;
+    }
+
+    .rightCom {
+      width: 80%;
+      margin-left: 20%;
+    }
+
+    .policePostLeft {
+  
+      width: 90%;
+      margin-left: 15px;
+      margin-top: 15px;
+      font-size: 15px;
+    }
+    .policePostRight {
+      width: 90%;
+      margin-right: -50px;
+      margin-top: 10px;
+      font-size: 15px;
+    }
+
+    .datePostRight {
+      margin-right: -52px;
+    }
+
+    .containCommentaires {
+      width: 95%;
+    }
+
+    .commentTitle {
+      font-size: 30px;
+      width: 90%;
+    }
+    .avis {
+      font-size: 2em;
+      top: 5px;
+    }
+    .avis1 {
+      top: 15px;
+    }
+
+    #com {
+      width: 90%;
+    }
+
+    .validerAvis {
+      width: 20%;
+    }
+
+    
+}

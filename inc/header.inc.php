@@ -1,4 +1,6 @@
-
+<?php 
+require_once "config/init.php";
+?>
 <!doctype html>
 <html lang="fr">
 <head>
@@ -7,24 +9,24 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title> 
-    <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/navDis.css">
-    <link rel="stylesheet" href="assets/css/index.css">
-    <link rel="stylesheet" href="assets/bootstrap/scss/bootstrap.css">
-    <link rel="icon" href="assets/upload/starisland.png" type="icon star'island">
-    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Iceland&display=swap" rel="stylesheet">
-    <script src="assets/jquery/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script> 
-   
+    <link rel="stylesheet" href=" <?=  BASE_PATH; ?>assets/css/header.css">
+    <link rel="stylesheet" href="<?=  BASE_PATH; ?>assets/css/gallerie.css">
+    <link rel="stylesheet" href="<?=  BASE_PATH; ?>assets/css/navDis.css">
+    <link rel="stylesheet" href="<?=  BASE_PATH; ?>assets/css/index.css">
+    <link type="text/css" rel="stylesheet" href="<?=  BASE_PATH; ?>assets/bootstrap/scss/bootstrap.css">
+    <link type="text/css" rel="icon" href="<?=  BASE_PATH; ?>assets/upload/starisland.png" type="icon star'island">
+    <link type="text/css" rel="preconnect" href="https://fonts.googleapis.com%22%3E/">
+    <link type="text/css" rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link type="text/css" href="https://fonts.googleapis.com/css2?family=Iceland&display=swap" rel="stylesheet">
+    <script type="text/css" src="<?=  BASE_PATH; ?>assets/jquery/jquery.min.js"></script>
+    <script type="text/css" src="<?=  BASE_PATH; ?>assets/bootstrap/js/bootstrap.min.js"></script> 
 </head>
 <body>
 
 <header>
 <nav class=" navbar navbar-expand-lg mb-5"id="colorNav">
     <div class="container-fluid">
-    <a href="<?=  BASE_PATH; ?>"><img id="logoIsland" src="assets/upload/starisland.png" alt=""></a>           
+    <a href="<?=  BASE_PATH; ?>"><img id="logoIsland" src="<?=  BASE_PATH; ?>assets/upload/starisland.png" alt=""></a>           
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span id="buttonBurger" class="navbar-toggler-icon">
                 <img id="burger" src="assets/upload/noun-menu.png" alt="">
@@ -38,16 +40,19 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="#">GALLERIE</a>
+                    <a class="nav-link " href="<?=  BASE_PATH.'gallerie.php/'; ?>">GALLERIE</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="#">DEVENIR VIP</a>
+                    <a class="nav-link " href="<?=  BASE_PATH.'vip.php/'; ?>">DEVENIR VIP</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="">SERVEUR</a>
+                    <a class="nav-link " href="<?=  BASE_PATH.'serveur.php/'; ?>">SERVEUR</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="<?=  BASE_PATH.'back/'; ?>">Accès Back-office</a>
+                    <a class="nav-link " href="<?=  BASE_PATH.'event.php/'; ?>">EVENT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="<?=  BASE_PATH.'faq.php/'; ?>">F.A.Q</a>
                 </li>
                 <?php     if (admin()):           ?>
                 <li class="nav-item dropdown">
