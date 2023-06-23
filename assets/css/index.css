@@ -1,8 +1,7 @@
 *{
-    font-family: 'Iceland', cursive;
-    color:antiquewhite ;
+  font-family: 'Iceland', cursive;
+  color:antiquewhite ;
 }
-
 /* premiere partie de la page avec le carousel qui donne les 3 visuels */
 .fondIndex{
     
@@ -10,12 +9,10 @@
     margin-top: -50px;
     background-repeat: no-repeat;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%,rgba(255,255,255,0) 75%,rgb(19, 19, 19) 100%),url("../upload/gta_decors5.png");    
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#131313',GradientType=0 ); /* IE6-9 */
 }   
 
 .fondIndexBas{
     background-image: linear-gradient(to bottom, rgb(19, 19, 19) 5%,rgba(19,19,19,0.75) 25%,rgba(255,255,255,0) 100%),url("../upload/gta_decors2.png");
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#131313', endColorstr='#03ffffff',GradientType=0 ); /* IE6-9 */
     height:100vh;
     background-repeat: no-repeat;
     padding-top:3%;
@@ -133,8 +130,6 @@
 
 
   
-  
-
 
   /* carousel defilement d'images page 2 */
   #galCarousel {
@@ -164,8 +159,7 @@
   #galCarousel div.hideLeft {
     left: 0%;
     opacity: 0;
-    transform: translateY(50%) translateX(-50%);
-  }
+    transform: translateY(0%) translateX(50%);  }
   
   #galCarousel div.hideLeft img {
     width: 200px;
@@ -174,7 +168,7 @@
   #galCarousel div.hideRight {
     left: 100%;
     opacity: 0;
-    transform: translateY(50%) translateX(-50%);
+    transform: translateY(0%) translateX(-100%);
   }
   
   #galCarousel div.hideRight img {
@@ -231,7 +225,7 @@
   
   .buttons {
     position: fixed;
-    left: 50%;
+    left: 49.8%;
     top: 28rem;
     transform: translateX(-50%);
     bottom: 10px;
@@ -560,14 +554,12 @@
     width: 80%;
   }
 
-
   /* ############# MOBILE media queries  */
 
   @media only screen and (min-device-width : 350px) and (max-device-width : 640px) {
     
     .fondIndex{
       background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%,rgba(255,255,255,0) 75%,rgb(19, 19, 19) 100%),url("../upload/gta_decors5.png");    
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#131313',GradientType=0 ); /* IE6-9 */
       background-size: cover;
       background-position-X: center;
     }
@@ -612,6 +604,19 @@
       object-fit: contain;
     }
 
+    #galCarousel div.hideLeft {
+ 
+      transform: translateY(10%) translateX(-50%);
+    }
+    
+ 
+    #galCarousel div.hideRight {
+      left: 100%;
+      opacity: 0;
+      transform: translateY(10%) translateX(-50%);
+    }
+    
+
     .buttons {
       left: 49%;
       top: 20rem;
@@ -619,7 +624,7 @@
 
     .containTopServer {
       width: 95%;
-      margin-top: 20%;
+      margin-top: 30%;
     }
     .etoile {
       font-size: 2em;

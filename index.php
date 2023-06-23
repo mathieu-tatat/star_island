@@ -248,7 +248,7 @@
 
     </div>
 
-    <script src="<?=  BASE_PATH; ?>assets/js/index.js" defer ></script>
+    <script src="assets/js/index.js" defer ></script>
 
 </main>
 

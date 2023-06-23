@@ -15,9 +15,7 @@ require_once "config/init.php";
     <link rel="stylesheet" href="<?=  BASE_PATH; ?>assets/css/index.css">
     <link type="text/css" rel="stylesheet" href="<?=  BASE_PATH; ?>assets/bootstrap/scss/bootstrap.css">
     <link type="text/css" rel="icon" href="<?=  BASE_PATH; ?>assets/upload/starisland.png" type="icon star'island">
-    <link type="text/css" rel="preconnect" href="https://fonts.googleapis.com%22%3E/">
-    <link type="text/css" rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link type="text/css" href="https://fonts.googleapis.com/css2?family=Iceland&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="<?=  BASE_PATH; ?>assets/css/icelandTypo.css">    <script src="<?=  BASE_PATH; ?>assets/js/jqueryPack.js"></script>
     <script type="text/css" src="<?=  BASE_PATH; ?>assets/jquery/jquery.min.js"></script>
     <script type="text/css" src="<?=  BASE_PATH; ?>assets/bootstrap/js/bootstrap.min.js"></script> 
 </head>
@@ -36,7 +34,7 @@ require_once "config/init.php";
             <ul class="navbar-nav me-auto"id="ulNav">
                 <li class="nav-item">
                     <a class="nav-link active" href="<?=  BASE_PATH; ?>">
-                        <img src="assets/upload/Vector.png" alt="">
+                        <img src="<?=  BASE_PATH; ?>assets/upload/Vector.png" alt="">
                     </a>
                 </li>
                 <li class="nav-item">
@@ -73,8 +71,8 @@ require_once "config/init.php";
             <a href="<?=  BASE_PATH.'?a=dis'; ?>" class="btn btn-primary">Déconnexion</a>
             <?php     else:           ?>
                 <div id="outLink">
-            <a href="<?=  BASE_PATH.'security/login.php'; ?>"><img src="assets/upload/Bouton tuto.png" alt="logo tutoriel "></a>
-            <a href="<?=  BASE_PATH.'security/register.php'; ?>"><img src="assets/upload/Bouton avis.png" alt="image logo avis "></a>
+            <a href="<?=  BASE_PATH.'security/login.php'; ?>"><img src="<?=  BASE_PATH; ?>assets/upload/Bouton tuto.png" alt="logo tutoriel "></a>
+            <a href="<?=  BASE_PATH.'security/register.php'; ?>"><img src="<?=  BASE_PATH; ?>assets/upload/Bouton avis.png" alt="image logo avis "></a>
             </div>
             <?php        endif;        ?>
 
