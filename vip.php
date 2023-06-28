@@ -1,3 +1,4 @@
+<title>Star'Island VIP page</title>
 <?php       
 
     require_once 'config/function.php';
@@ -13,7 +14,36 @@
 
     }
 ?>
+<main>
 
-<h1>page VIP</h1>
+<div class="fondVIP">
+    <h1 class="titleVIP">DEVENIR VIP</h1>
 
+        <div class="topCard">
+            <div class="encarTxt" >
+                <h2 class="vipTitle2">VIP</h3>
+                <p class="vipTxt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis pariatur optio unde eligendi eveniet enim voluptas voluptatibus laboriosam amet quos vel debitis rem facilis repellendus in explicabo, harum inventore tempora.</p>
+            </div>
+
+                <div class="cadrImg">
+                    <img class="imgCard"  src="<?=  BASE_PATH; ?>assets/upload/Perso1v2.png" alt="">
+                </div>
+        </div>
+
+        <div class="bottomCard">
+            
+            <div class="cadrImg2">
+                <img class="imgCard" src="<?=  BASE_PATH; ?>assets/upload/Perso2.png" alt="">
+            </div>
+
+            <div class="encarTxt" >
+                <div>
+                        <h3 class="vipTitle2">VIP +</h3>
+                        <p class="vipTxt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis pariatur optio unde eligendi eveniet enim voluptas voluptatibus laboriosam amet quos vel debitis rem facilis repellendus in explicabo, harum inventore tempora.</p>
+                </div>
+            </div>
+
+        </div>
+</div>
+</main>
 <?php     require_once 'inc/footer.inc.php';          ?>

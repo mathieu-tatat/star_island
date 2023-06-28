@@ -1,0 +1,113 @@
+.fondVIP{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%,rgba(255,255,255,0) 75%,rgb(19, 19, 19) 100%),url("../upload/gta_decors4.png");   
+    background-repeat: no-repeat;
+    object-fit:scale-down;
+}
+
+.titleVIP{
+    display: flex;
+    justify-content: center;
+    padding-top: 3%;
+}
+
+.encarTxt{
+    margin-top: 9%;
+}
+
+.topCard{
+    width: 60%;
+    display: flex;
+    margin-left: 29%;
+}
+
+.bottomCard{
+    width: 60%;
+    display: flex;
+    margin-left: 13%;
+    padding-bottom: 2%;
+}
+
+.vipTitle2{
+    display: flex;
+    justify-content: center;
+    color: #ea4c6f;
+    text-decoration: underline;
+}
+
+.vipTxt{
+    font-size: 24px;
+    letter-spacing: normal;
+    text-align: center;
+    width: 60%;
+    margin: auto;
+}
+
+.imgCard{
+    
+    object-fit: cover;
+    
+}
+
+.cadrImg2{
+    border: #ea4c6f solid 3px;
+    width: 25%;
+    height: 460px;
+    position: relative;
+}
+.cadrImg{
+    border: #ea4c6f solid 3px;
+    width: 30%;
+    height: 435px;
+    position: relative;
+   
+}
+
+@media only screen and (min-device-width : 350px) and (max-device-width : 640px) {
+   
+    
+  
+    .topCard{
+        width: 90%;
+        margin: auto;
+     
+    }
+    
+    .bottomCard{
+        width: 90%;
+        margin: auto;
+       
+      
+    }
+    
+    .vipTitle2{
+        display: flex;
+        justify-content: center;
+        color: #ea4c6f;
+        text-decoration: underline;
+    }
+    
+    .vipTxt{
+        font-size: 18px;
+        width: 100%;
+        margin: auto;
+        background-color: #3c3b3985;
+        border-radius: 10px;
+        color: antiquewhite;
+        margin-bottom: 2%;
+    }
+    .imgCard{
+    
+      display: none;
+        
+    }
+    
+    .cadrImg2{
+  display: none;
+    }
+    .cadrImg{
+      display: none;
+    }
+    
+
+    
+}

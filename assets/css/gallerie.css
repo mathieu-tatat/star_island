@@ -1,97 +1,86 @@
-
-.slideGal {
-
-  perspective: 500px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 580px;
-  margin-bottom: 10px;
+.gallery-slider_wrapper {
+  width:100%;
+  max-width:768px;
+  margin:auto;
 }
-.slideGal > * {
-  flex: 0 0 auto;
+.gallery-slider_wrapper .owl-theme .owl-nav {
+    margin:0;
 }
-.slideGal figure {
-  margin: 0;
-  width: 800px;
-  transform-style: preserve-3d;
-  transition: transform 0.5s;
-  transform-origin: 50% 50% -936.843px;
+.gallery-slider_wrapper .owl-theme .owl-nav [class*=owl-] {
+    width:30px;
+    height:120px;
+    background:#ea4c6f;
+    font-size: 20px;
+    color:#fff;
+    margin:0;
+    padding: 0;
+    border-radius: 0;
 }
-.slideGal figure img {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 0 40px;
-  opacity: 0.9;
-}
-.slideGal figure img:not(:first-of-type) {
-  position: absolute;
-  left: 0;
-  top: 0;
-  transform-origin: 50% 50% -936.843px;
-}
-.slideGal figure img:nth-child(2) {
-  transform: rotateY(0.7853981634rad);
-}
-.slideGal figure img:nth-child(3) {
-  transform: rotateY(1.5707963268rad);
-}
-.slideGal figure img:nth-child(4) {
-  transform: rotateY(2.3561944902rad);
-}
-.slideGal figure img:nth-child(5) {
-  transform: rotateY(3.1415926536rad);
-}
-.slideGal figure img:nth-child(6) {
-  transform: rotateY(3.926990817rad);
-}
-.slideGal figure img:nth-child(7) {
-  transform: rotateY(4.7123889804rad);
-}
-.slideGal figure img:nth-child(8) {
-  transform: rotateY(5.4977871438rad);
-}
-.slideGal nav {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0 0;
-}
-.slideGal nav button {
-  flex: 0 0 auto;
-  margin: 0 5px;
-  cursor: pointer;
-  color: #333;
-  background: none;
-  border: 1px solid;
-  letter-spacing: 1px;
-  padding: 5px 10px;
-}
-
-
-@media only screen and (min-device-width : 350px) and (max-device-width : 640px) {
-
-
-  .slideGal {
-  height: 450px;
-  }
-
-  .slideGal figure {
-    width: 400px;
-    transform-origin: 50% 50% -936.843px;
-  }
-
-  .slideGal figure img:not(:first-of-type) {
+.gallery-slider_wrapper .owl-carousel .owl-nav .owl-prev:before,
+.gallery-slider_wrapper .owl-carousel .owl-nav .owl-next:before {
+    font-family: 'LineAwesome';
     position: absolute;
-    left: 0;
-    top: 25px;
-    transform-origin: 50% 50% -935.843px;
-  }
+    line-height: 120px;
+    width:30px;
+    text-align: center;
+    top:0;
+    left:0;
+}
+.gallery-slider_wrapper .owl-carousel .owl-nav .owl-prev:before {
+    transform: rotate(180deg);
+    content: "➜";
+}
+.gallery-slider_wrapper .owl-carousel .owl-nav .owl-prev {
+    position: absolute;
+    top:0;
+    left:-25px;
+}
+.gallery-slider_wrapper .owl-carousel .owl-nav .owl-next:before {
+    content: "➜";
+}
+.gallery-slider_wrapper .owl-carousel .owl-nav .owl-next {
+    position: absolute;
+    top:0;
+    right:-24px;
+}
+.gallery-slider_wrapper .owl-theme .owl-nav [class*=owl-]:hover {
+    background:#fff;
+    color:#ea4c6f;
+}
+.gallery-slider_wrapper .single-gallery-carousel-thumbnail-box .item {
+    position: relative;
+    margin: 0 5px;
+    height: 120px;
+}
+.gallery-slider_wrapper .single-gallery-carousel-thumbnail-box .item img {
+    height: 100%;
+    cursor: pointer;
+}
 
-  .slideGal nav {
-    display: flex;
-    justify-content: center;
-    margin: 45px 0 0;
-  }
+#imageSize{
+  height: 400px;
+  object-fit: contain;
+}
 
+#boxSize{
+  height:630px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.bgc{
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%,rgba(255,255,255,0) 75%,rgb(19, 19, 19) 100%),url("../upload/gta_decors5.png");    
+}
+
+#mIniImg{
+  object-fit: cover;
+}
+@media only screen and (min-device-width : 350px) and (max-device-width : 640px) {
+    
+  #imageSize{
+    height: 220px;
+    margin-bottom: 80px;
+  }
+  
+  
+  
 }

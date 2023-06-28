@@ -1,0 +1,230 @@
+.faqFond{
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%,rgba(255,255,255,0) 75%,rgb(19, 19, 19) 100%),url("../upload/paysage.png");    
+    opacity: 0.8;
+    padding-top: 60px;
+    height: auto;
+    padding-bottom: 3%;
+}
+html {
+
+    box-sizing: border-box;
+    --bgColorMenu : #1d1d27;
+    --duration: .7s;    
+
+}
+
+html *,
+html *::before,
+html *::after {
+
+    box-sizing: inherit;
+
+}
+.textCenter{
+    margin: 1rem;
+}
+body{
+ 
+    background-color: #ff8c00;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color var(--duration);
+    flex-direction: column;
+
+}
+
+.menu{
+    margin: 0;
+    display: flex;
+    /* Works well with 100% width  */
+    width: 40em;
+    font-size: 1.5em;
+    padding: 0 2.85em;
+    align-items: center;
+    justify-content: center;
+    background-color: #71717d75;
+    margin: auto;
+    border-radius: 60px;
+    height: 50px;
+    border: 1px solid #ea4c6f;
+    margin-bottom: 60px;
+}
+
+.menu__item{
+    
+    all: unset;
+    flex-grow: 1;
+    z-index: 100;
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    border-radius: 50%;
+    align-items: center;
+    will-change: transform;
+    justify-content: center;
+   
+    transition: transform var(--timeOut , var(--duration));
+
+}
+
+.menu__item::before{
+    
+    content: "";
+    z-index: -1;
+    width: 4.2em;
+    height: 4.2em;
+    border-radius: 50%;
+    position: absolute;
+    transform: scale(0);
+    transition: background-color var(--duration), transform var(--duration);
+    
+}
+
+
+.menu__item.active {
+
+    transform: translate3d(0, -.2em , 0);
+
+}
+
+.menu__item.active::before{
+    
+    transform: scale(1);
+    background-color: var(--bgColorItem);
+
+}
+
+.icon{
+    
+    width: 2.6em;
+    height: 2.6em;
+    stroke: white;
+    fill: transparent;
+    stroke-width: 1pt;
+    stroke-miterlimit: 10;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 400;
+    
+}
+
+.menu__item.active .icon {
+
+    animation: strok 1.5s reverse;
+    
+}
+
+@keyframes strok {
+
+    100% {
+
+        stroke-dashoffset: 400;
+
+    }
+
+}
+
+.svg-container {
+
+    width: 0;
+    height: 0;
+}
+
+.containTeam{
+    width: 90%;
+    display: flex;
+    margin: auto;
+    height: 415px;
+    flex-wrap: wrap;
+    overflow: scroll;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    justify-content: center;
+    padding: 5px;
+}
+
+
+.staffImg{
+    border-radius: 60px;
+    height: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 calc(18% - 20px); /* 5 images par ligne (20% - 20px de marge) */
+    margin-bottom: 20px;
+    flex-direction: column;
+
+}
+
+.staffImg:nth-child(5n+1),
+.staffImg:nth-child(5n+12),
+.staffImg:nth-child(5n+23),
+.staffImg:nth-child(5n+34), 
+.staffImg:nth-child(5n+45),
+.staffImg:nth-child(5n+56),
+.staffImg:nth-child(5n+67),
+.staffImg:nth-child(5n+78),
+.staffImg:nth-child(5n+89),
+.staffImg:nth-child(5n+100) 
+{
+  margin-left: 1.4%;
+   /* Décalage vers la droite pour les images 1, 3, 5, ... */
+}
+
+.staffImg:nth-child(5n+6),
+.staffImg:nth-child(5n+17),
+.staffImg:nth-child(5n+28),
+.staffImg:nth-child(5n+39), 
+.staffImg:nth-child(5n+50),
+.staffImg:nth-child(5n+61),
+.staffImg:nth-child(5n+72),
+.staffImg:nth-child(5n+83),
+.staffImg:nth-child(5n+94)    
+{
+  margin-left: 0%; 
+}
+
+
+    .image-text {
+        display: none; /* Masquer le texte par défaut */
+      }
+       
+     
+      .staffImg:hover .image-text {
+        display: block; /* Afficher le texte au survol */
+     
+      }
+      .staffImg:hover{
+        padding-top: 50px;
+      }
+      .socialImg{
+        width: 50px;
+        background-color: rgba(250, 235, 215, 0.462);
+        position: relative;top: -4px;
+        border-radius:0 0 50px 50px;
+        z-index: -1;
+        border: #ea4c6f solid 1px;
+       
+      }
+
+     
+
+@media screen and (max-width: 50em) {
+    .menu {
+        font-size: .8em;
+        height: auto;
+        width: 100%;
+       
+      }
+    .faqFond {
+        padding-top: 30px;
+        padding-bottom: 1.5%;
+      }
+
+      .textCenter {
+        margin: 0.5rem;
+      }
+      .containTeam {
+        gap: 20px;
+      }
+}

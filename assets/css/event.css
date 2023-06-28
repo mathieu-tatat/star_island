@@ -1,0 +1,325 @@
+.fondEvent{
+    height:80vh;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%,rgba(255,255,255,0) 75%,rgb(19, 19, 19) 100%),url("../upload/prison.png");    
+}   
+
+.containEvent{
+    width: 90%;
+    display: flex;
+    margin: auto;
+    padding-top: 4%;
+    align-items: center;
+}
+
+.imgEvent{
+    width: 50%; 
+    margin-left: 8%; 
+}
+
+.eventImage{
+    height: 500px;
+}
+
+.eventBlockTxt{
+display: flex;
+justify-content: center;
+width: 50%;
+flex-direction: column;
+}
+
+.titleEvent{
+    display: flex;
+    justify-content: center;
+    text-align: center; 
+  
+}
+
+.HtitleEvent{
+    display: flex;
+    justify-content: center;
+    text-align: center; 
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+.pTxtEvent{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    font-size: 22px;
+    line-height: normal;
+}
+.timer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 60px;
+}
+
+
+/* ########## horloge #############*/
+.numbers{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+
+
+strong{
+    justify-content: center;
+    display: flex;
+    font-size: 20px;
+    color: antiquewhite;
+}
+
+em{
+    color: antiquewhite;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+span{
+    position: relative;
+}
+ 
+.countdownHolder{
+    position: relative;
+    margin:0 auto;
+    font: 80px 'Open Sans Condensed',sans-serif;
+    text-align:center;
+    letter-spacing:-10px;
+    top: -40px;
+    left: 10px;
+}
+
+.position{
+    display: inline-block;
+    height: 95px;
+    overflow: hidden;
+    position: relative;
+    width: 50px;
+    width: 35px;
+}
+
+.digit{
+    position:absolute;
+    display:block;
+    background-color:#44444400;
+    border-radius:0.2em;
+    text-align:center;
+    font-size: 80px;
+ 
+}
+
+.digit.static{
+   
+    
+    background-image: -webkit-gradient(
+            linear,
+            left bottom,
+            left top,
+            color-stop(0.5, #cdc4c400),
+            color-stop(0.5, #dcd4d400)
+    );
+}
+
+/**
+ * You can use these classes to hide parts
+ * of the countdown that you don't need.
+ */
+
+.countDays{ /* display:none !important;*/ margin-right: 20px;}
+.countDiv0{ /* display:none !important;*/ }
+.countHours{margin-right: 20px;}
+.countDiv1{}
+.countMinutes{margin-right: 20px;}
+.countDiv2{}
+.countSeconds{margin-right: 20px;}
+
+
+.countDiv{
+    display:inline-block;
+    width:10px;
+    height:2em;
+    position:relative;
+}
+
+.countDiv:before,
+.countDiv:after{
+    position:absolute;
+    width:10px;
+    height:10px;
+    background-color:antiquewhite;
+    border-radius:50%;
+    left:50%;
+    margin-left:-3px;
+    top:60%;
+    box-shadow:1px 1px 1px rgba(4, 4, 4, 0.5);
+    content:'';
+}
+
+.countDiv:after{
+    top:50%;
+}
+
+/*
+media queries format mobile
+*/
+
+@media only screen and (min-device-width : 350px) and (max-device-width : 801px) {
+    
+    .fondEvent{
+        height:100vh;
+        
+    }   
+        .containEvent {
+        width: 100%;
+        flex-direction: column;
+        position: absolute;
+        top: 20%;
+    }
+    
+    .eventBlockTxt{
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        flex-direction: column;
+    }
+        
+    .imgEvent{
+        display: none;
+    }
+    
+    .titleEvent{
+        display: flex;
+        justify-content: center;
+        text-align: center; 
+        width: 100%;
+        font-size: 35px;background-color: #3c3b3985;
+        border-radius: 10px;
+        padding: 5px;
+      
+    }
+    
+    .HtitleEvent {
+        margin-top: 15%;
+        font-size: 35px;background-color: #3c3b3985;
+        border-radius: 10px;
+        padding: 5px;
+      }
+
+    .pTxtEvent {
+        width: 100%;
+        background-color: #3c3b3985;
+        border-radius: 10px;
+        padding: 5px;
+        }
+    
+    .timer{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 60px;
+    }
+    
+
+    em{     
+        font-size: 15px;
+    }
+
+    strong{
+        font-size: 30px;
+    }
+
+    .numbers{
+        top: 25%;
+        left: 8%;
+        height: 20vh;
+    }
+     
+        .countdownHolder{
+            font: 20px 'Open Sans Condensed',sans-serif;
+            letter-spacing:-10px;
+            display: inline-block;
+            top:-25px;
+            
+        }
+
+        .position{
+            display: inline-block;
+            height: 54px;
+            overflow: hidden;
+            position: relative;
+            width: 25px;
+        }
+
+        .digit{
+            position:absolute;
+            display:block;
+            background-color:#44444400;
+            border-radius:0.2em;
+            text-align:center;
+            letter-spacing:0px; 
+            width: 20px;
+            height: 40px;
+            font-size: 45px;
+        
+        }
+
+        .digit.static{
+        
+            
+            background-image: -webkit-gradient(
+                    linear,
+                    left bottom,
+                    left top,
+                    color-stop(0.5, #cdc4c400),
+                    color-stop(0.5, #dcd4d400)
+            );
+        }
+
+        /**
+        * You can use these classes to hide parts
+        * of the countdown that you don't need.
+        */
+
+        .countDays{ /* display:none !important;*/ margin-right: 10px;}
+        .countDiv0{ /* display:none !important;*/ }
+        .countHours{
+            margin-right: 10px;
+        }
+        .countDiv1{}
+        .countMinutes{
+            margin-right: 10px;
+        }
+        .countDiv2{}
+        .countSeconds{
+            margin-right: 10px;
+        }
+        
+
+
+        .countDiv{
+            display:inline-block;
+            width:16px;
+            height:1.6em;
+            position:relative;
+        }
+
+        .countDiv:before,
+        .countDiv:after{
+          display: none;
+        }
+
+        .countDiv:after{
+            top:50%;
+        }
+               
+}
+

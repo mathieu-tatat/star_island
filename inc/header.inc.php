@@ -8,11 +8,19 @@ require_once "config/init.php";
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title> 
+    <title>Star'Island</title>
+    <link rel="stylesheet" href="<?=  BASE_PATH; ?>assets/css/faq.css">
+    <link rel="stylesheet" href="<?=  BASE_PATH; ?>assets/css/event.css">
+    <link rel="stylesheet" href=" <?=  BASE_PATH; ?>assets/css/vip.css">
     <link rel="stylesheet" href=" <?=  BASE_PATH; ?>assets/css/header.css">
     <link rel="stylesheet" href="<?=  BASE_PATH; ?>assets/css/gallerie.css">
     <link rel="stylesheet" href="<?=  BASE_PATH; ?>assets/css/navDis.css">
     <link rel="stylesheet" href="<?=  BASE_PATH; ?>assets/css/index.css">
+    <link rel="stylesheet" href="<?=  BASE_PATH; ?>assets/css/line-awesome.min.css">
+    <link rel="stylesheet" href="<?=  BASE_PATH; ?>assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="<?=  BASE_PATH; ?>assets/css/owl.theme.default.css">
+    <link rel="stylesheet" href="<?=  BASE_PATH; ?>assets/css/magnific-popup.css">
+
     <link type="text/css" rel="stylesheet" href="<?=  BASE_PATH; ?>assets/bootstrap/scss/bootstrap.css">
     <link type="text/css" rel="icon" href="<?=  BASE_PATH; ?>assets/upload/starisland.png" type="icon star'island">
     <link rel="stylesheet" type="text/css" href="<?=  BASE_PATH; ?>assets/css/icelandTypo.css">    <script src="<?=  BASE_PATH; ?>assets/js/jqueryPack.js"></script>
@@ -22,12 +30,12 @@ require_once "config/init.php";
 <body>
 
 <header>
-<nav class=" navbar navbar-expand-lg mb-5"id="colorNav">
+<nav class=" navbar navbar-expand-lg "id="colorNav">
     <div class="container-fluid">
     <a href="<?=  BASE_PATH; ?>"><img id="logoIsland" src="<?=  BASE_PATH; ?>assets/upload/starisland.png" alt=""></a>           
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span id="buttonBurger" class="navbar-toggler-icon">
-                <img id="burger" src="assets/upload/noun-menu.png" alt="">
+                <img id="burger" src="<?=  BASE_PATH; ?>assets/upload/noun-menu.png" alt="">
             </span>
         </button>
         <div class="collapse navbar-collapse" id="navbarColor01">
@@ -43,9 +51,9 @@ require_once "config/init.php";
                 <li class="nav-item">
                     <a class="nav-link " href="<?=  BASE_PATH.'vip.php/'; ?>">DEVENIR VIP</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link " href="<?=  BASE_PATH.'serveur.php/'; ?>">SERVEUR</a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a class="nav-link " href="<?=  BASE_PATH.'event.php/'; ?>">EVENT</a>
                 </li>
