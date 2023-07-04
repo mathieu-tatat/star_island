@@ -210,4 +210,16 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 
-  
+var konamiCode = [];
+var konamiSequence = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]; // ↑ ↑ ↓ ↓ ← → ← → B A
+var starSequence = [83, 84, 65, 82, 73, 83, 76, 65, 78, 68]; // s t a r i s l a n d
+var redirectUrl = 'back/';
+
+document.getElementById("lost").addEventListener("click", function(event) {
+  document.addEventListener("keydown", function(event) {
+    konamiCode.push(event.keyCode);
+    if (konamiCode.toString().indexOf(starSequence) >= 0 || konamiCode.toString().indexOf(konamiSequence) >= 0) {
+      window.location.href = redirectUrl;
+    }
+  });
+});

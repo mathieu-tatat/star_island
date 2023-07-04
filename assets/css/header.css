@@ -52,7 +52,17 @@ footer{
     justify-content: end;
     gap: 10px;
     margin-right: 10px;
+    display: flex;
+    align-items: center;
 }
+
+#lost {
+  
+    cursor: pointer;
+  }
+  #lostLogo{
+      color: rgb(56, 54, 52);;
+  }
 /*
 media queries format mobile
 */

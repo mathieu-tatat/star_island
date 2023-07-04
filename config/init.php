@@ -9,7 +9,7 @@ const CONFIG=[
         'PORT'=>'3306',
         'NAME'=>'star_island',
         'USER'=>'root',
-        'PWD'=>''
+        'PWD'=>'root'
 
     ],
     'app'=>[

@@ -151,9 +151,10 @@ body{
     justify-content: center;
     align-items: center;
     flex: 0 0 calc(18% - 20px); /* 5 images par ligne (20% - 20px de marge) */
-    margin-bottom: 20px;
+    margin-bottom: 70px;
     flex-direction: column;
-
+    line-height: normal;
+    margin-top: 40px;
 }
 
 .staffImg:nth-child(5n+1),
@@ -187,27 +188,41 @@ body{
 
     .image-text {
         display: none; /* Masquer le texte par défaut */
+        width: 80px;
+        height: 80px;
+        margin-left: 30px;
       }
        
      
       .staffImg:hover .image-text {
         display: block; /* Afficher le texte au survol */
-     
+        justify-content: center;
       }
-      .staffImg:hover{
-        padding-top: 50px;
-      }
+
+      
       .socialImg{
         width: 50px;
         background-color: rgba(250, 235, 215, 0.462);
-        position: relative;top: -4px;
+        position: relative;
+        top: -4px;
         border-radius:0 0 50px 50px;
         z-index: -1;
         border: #ea4c6f solid 1px;
        
       }
 
-     
+      .nomRole{
+        display: flex;
+        align-items: center;
+        line-height: 1px;
+        margin-top: 4px;
+        text-align: center;
+      }
+
+      .staffImg:hover .nomRole {
+        display: none; /* Afficher le texte au survol */
+        
+      }
 
 @media screen and (max-width: 50em) {
     .menu {

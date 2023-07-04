@@ -1,0 +1,12 @@
+#outLink{
+display: flex;
+flex-direction: column;
+padding: 3px;
+gap: 8px;
+width: inherit;
+margin: auto;
+}
+
+#descr{
+    width: 33% !important;
+}

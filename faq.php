@@ -64,18 +64,24 @@
 
         <div class="staffImg" >
             <img class="avatarFaq" src="<?=  BASE_PATH; ?>assets/upload/Souen.png" alt="" srcset="">
+            <p class="nomRole">nom</p>
+            <p class="nomRole">rôle</p>
             <a href="https://fr-fr.facebook.com/"class="image-text"><img class="socialImg" src="<?=  BASE_PATH; ?>assets/upload/facebook.png" alt="" srcset=""></a>
 
         </div>
 
         <div class="staffImg" >
             <img class="avatarFaq" src="<?=  BASE_PATH; ?>assets/upload/ellios.png" alt="" srcset="">
+            <p class="nomRole">nom</p>
+            <p  class="nomRole">rôle</p>
             <a href="https://fr-fr.facebook.com/"class="image-text"><img class="socialImg" src="<?=  BASE_PATH; ?>assets/upload/facebook.png" alt="" srcset=""></a>
 
         </div>
 
         <div class="staffImg" >
             <img class="avatarFaq" src="<?=  BASE_PATH; ?>assets/upload/charmilia.png" alt="" srcset="">
+            <p class="nomRole">nom</p>
+            <p class="nomRole">rôle</p>
             <a href="https://fr-fr.facebook.com/"class="image-text"><img class="socialImg" src="<?=  BASE_PATH; ?>assets/upload/facebook.png" alt="" srcset=""></a>
 
         </div>
@@ -83,24 +89,32 @@
 
         <div class="staffImg" >
             <img class="avatarFaq" src="<?=  BASE_PATH; ?>assets/upload/hans.png" alt="" srcset="">
+            <p class="nomRole">nom</p>
+            <p class="nomRole">rôle</p>
             <a href="https://fr-fr.facebook.com/"class="image-text"><img class="socialImg" src="<?=  BASE_PATH; ?>assets/upload/facebook.png" alt="" srcset=""></a>
 
         </div>
  
         <div class="staffImg" >
             <img class="avatarFaq" src="<?=  BASE_PATH; ?>assets/upload/Souen.png" alt="" srcset="">
+            <p class="nomRole">nom</p>
+            <p class="nomRole">rôle</p>
             <a href="https://fr-fr.facebook.com/"class="image-text"><img class="socialImg" src="<?=  BASE_PATH; ?>assets/upload/facebook.png" alt="" srcset=""></a>
 
         </div>
 
         <div class="staffImg" >
             <img class="avatarFaq" src="<?=  BASE_PATH; ?>assets/upload/ellios.png" alt="" srcset="">
+            <p class="nomRole">nom</p>
+            <p class="nomRole">rôle</p>
             <a href="https://fr-fr.facebook.com/"class="image-text"><img class="socialImg" src="<?=  BASE_PATH; ?>assets/upload/facebook.png" alt="" srcset=""></a>
 
         </div>
 
         <div class="staffImg" >
             <img class="avatarFaq" src="<?=  BASE_PATH; ?>assets/upload/charmilia.png" alt="" srcset="">
+            <p class="nomRole">nom</p>
+            <p class="nomRole">rôle</p>
             <a href="https://fr-fr.facebook.com/"class="image-text"><img class="socialImg" src="<?=  BASE_PATH; ?>assets/upload/facebook.png" alt="" srcset=""></a>
 
         </div>
@@ -108,24 +122,32 @@
 
         <div class="staffImg" >
             <img class="avatarFaq" src="<?=  BASE_PATH; ?>assets/upload/hans.png" alt="" srcset="">
+            <p class="nomRole">nom</p>
+            <p class="nomRole">rôle</p>
             <a href="https://fr-fr.facebook.com/"class="image-text"><img class="socialImg" src="<?=  BASE_PATH; ?>assets/upload/facebook.png" alt="" srcset=""></a>
 
         </div>
         
         <div class="staffImg" >
             <img class="avatarFaq" src="<?=  BASE_PATH; ?>assets/upload/Souen.png" alt="" srcset="">
+            <p class="nomRole">nom</p>
+            <p class="nomRole">rôle</p>
             <a href="https://fr-fr.facebook.com/"class="image-text"><img class="socialImg" src="<?=  BASE_PATH; ?>assets/upload/facebook.png" alt="" srcset=""></a>
 
         </div>
 
         <div class="staffImg" >
             <img class="avatarFaq" src="<?=  BASE_PATH; ?>assets/upload/Souen.png" alt="" srcset="">
+            <p class="nomRole">nom</p>
+            <p class="nomRole">rôle</p>
             <a href="https://fr-fr.facebook.com/"class="image-text"><img class="socialImg" src="<?=  BASE_PATH; ?>assets/upload/facebook.png" alt="" srcset=""></a>
 
         </div>
 
         <div class="staffImg" >
             <img class="avatarFaq" src="<?=  BASE_PATH; ?>assets/upload/ellios.png" alt="" srcset="">
+            <p class="nomRole">nom</p>
+            <p class="nomRole">rôle</p>
             <a href="https://fr-fr.facebook.com/"class="image-text"><img class="socialImg" src="<?=  BASE_PATH; ?>assets/upload/facebook.png" alt="" srcset=""></a>
 
         </div>
@@ -133,24 +155,32 @@
 
         <div class="staffImg" >
             <img class="avatarFaq" src="<?=  BASE_PATH; ?>assets/upload/Souen.png" alt="" srcset="">
+            <p class="nomRole">nom</p>
+            <p class="nomRole">rôle</p>
             <a href="https://fr-fr.facebook.com/"class="image-text"><img class="socialImg" src="<?=  BASE_PATH; ?>assets/upload/facebook.png" alt="" srcset=""></a>
 
         </div>
 
         <div class="staffImg" >
             <img class="avatarFaq" src="<?=  BASE_PATH; ?>assets/upload/hans.png" alt="" srcset="">
+            <p class="nomRole">nom</p>
+            <p class="nomRole">rôle</p>
             <a href="https://fr-fr.facebook.com/"class="image-text"><img class="socialImg" src="<?=  BASE_PATH; ?>assets/upload/facebook.png" alt="" srcset=""></a>
 
         </div>
 
         <div class="staffImg" >
             <img class="avatarFaq" src="<?=  BASE_PATH; ?>assets/upload/charmilia.png" alt="" srcset="">
+            <p class="nomRole">nom</p>
+            <p class="nomRole">rôle</p>
             <a href="https://fr-fr.facebook.com/"class="image-text"><img class="socialImg" src="<?=  BASE_PATH; ?>assets/upload/facebook.png" alt="" srcset=""></a>
 
         </div>
 
         <div class="staffImg" >
             <img class="avatarFaq" src="<?=  BASE_PATH; ?>assets/upload/Souen.png" alt="" srcset="">
+            <p class="nomRole">nom</p>
+            <p class="nomRole">rôle</p>
             <a href="https://fr-fr.facebook.com/"class="image-text"><img class="socialImg" src="<?=  BASE_PATH; ?>assets/upload/facebook.png" alt="" srcset=""></a>
 
         </div>
@@ -158,49 +188,65 @@
 
         <div class="staffImg" >
             <img class="avatarFaq" src="<?=  BASE_PATH; ?>assets/upload/ellios.png" alt="" srcset="">
+            <p class="nomRole">nom</p>
+            <p class="nomRole">rôle</p>
             <a href="https://fr-fr.facebook.com/"class="image-text"><img class="socialImg" src="<?=  BASE_PATH; ?>assets/upload/facebook.png" alt="" srcset=""></a>
 
         </div>
 
         <div class="staffImg" >
             <img class="avatarFaq" src="<?=  BASE_PATH; ?>assets/upload/charmilia.png" alt="" srcset="">
+            <p class="nomRole">nom</p>
+            <p class="nomRole">rôle</p>
             <a href="https://fr-fr.facebook.com/"class="image-text"><img class="socialImg" src="<?=  BASE_PATH; ?>assets/upload/facebook.png" alt="" srcset=""></a>
 
         </div>
 
         <div class="staffImg" >
             <img class="avatarFaq" src="<?=  BASE_PATH; ?>assets/upload/Souen.png" alt="" srcset="">
+            <p class="nomRole">nom</p>
+            <p class="nomRole">rôle</p>
             <a href="https://fr-fr.facebook.com/"class="image-text"><img class="socialImg" src="<?=  BASE_PATH; ?>assets/upload/facebook.png" alt="" srcset=""></a>
 
         </div>
 
         <div class="staffImg" >
             <img class="avatarFaq" src="<?=  BASE_PATH; ?>assets/upload/ellios.png" alt="" srcset="">
-            <a href="https://fr-fr.facebook.com/"class="image-text"><img class="socialImg" src="<?=  BASE_PATH; ?>assets/upload/facebook.png" alt="" srcset=""></a>
+            
+            <p class="nomRole">nom</p>
+            <p class="nomRole">rôle</p><a href="https://fr-fr.facebook.com/"class="image-text"><img class="socialImg" src="<?=  BASE_PATH; ?>assets/upload/facebook.png" alt="" srcset=""></a>
 
         </div>
 
 
         <div class="staffImg" >
             <img class="avatarFaq" src="<?=  BASE_PATH; ?>assets/upload/charmilia.png" alt="" srcset="">
+            <p class="nomRole">nom</p>
+            <p class="nomRole">rôle</p>
             <a href="https://fr-fr.facebook.com/"class="image-text"><img class="socialImg" src="<?=  BASE_PATH; ?>assets/upload/facebook.png" alt="" srcset=""></a>
 
         </div>
 
         <div class="staffImg" >
             <img class="avatarFaq" src="<?=  BASE_PATH; ?>assets/upload/hans.png" alt="" srcset="">
+            <p class="nomRole">nom</p>
+            <p class="nomRole">rôle</p>
             <a href="https://fr-fr.facebook.com/"class="image-text"><img class="socialImg" src="<?=  BASE_PATH; ?>assets/upload/facebook.png" alt="" srcset=""></a>
 
         </div>
 
         <div class="staffImg" >
             <img class="avatarFaq" src="<?=  BASE_PATH; ?>assets/upload/Souen.png" alt="" srcset="">
+            <p class="nomRole">nom</p>
+            <p class="nomRole">rôle</p>
             <a href="https://fr-fr.facebook.com/"class="image-text"><img class="socialImg" src="<?=  BASE_PATH; ?>assets/upload/facebook.png" alt="" srcset=""></a>
 
         </div>
 
         <div class="staffImg" >
             <img class="avatarFaq" src="<?=  BASE_PATH; ?>assets/upload/ellios.png" alt="" srcset="">
+            <p class="nomRole">nom</p>
+            <p class="nomRole">rôle</p>
             <a href="https://fr-fr.facebook.com/"class="image-text"><img class="socialImg" src="<?=  BASE_PATH; ?>assets/upload/facebook.png" alt="" srcset=""></a>
 
         </div>
@@ -208,6 +254,8 @@
 
         <div class="staffImg" >
             <img class="avatarFaq" src="<?=  BASE_PATH; ?>assets/upload/hans.png" alt="" srcset="">
+            <p class="nomRole">nom</p>
+            <p class="nomRole">rôle</p>
             <a href="https://fr-fr.facebook.com/"class="image-text"><img class="socialImg" src="<?=  BASE_PATH; ?>assets/upload/facebook.png" alt="" srcset=""></a>
 
         </div>

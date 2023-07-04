@@ -1,5 +1,5 @@
 <?php       require_once 'config/function.php';
-            require_once 'inc/header.inc.php';
+           
             require_once 'navDis.php';
             if (isset($_GET['a']) && $_GET['a']=='dis'){
 
@@ -9,8 +9,9 @@
                 exit();
 
 
-            }
-            ?>
+            } 
+            require_once 'inc/header.inc.php';
+         ?>
 <main>
 
 <!-- partie haute de la page index -->

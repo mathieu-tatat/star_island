@@ -1,3 +1,8 @@
+<?php require_once '../config/init.php' 
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,21 +12,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
+    <link type="text/css" rel="icon" href="<?=  BASE_PATH; ?>assets/upload/starisland.png" type="icon star'island">
     <meta name="author" content="">
-    <title>Les moissons admin</title>
+    <title>Admin Star'Island</title>
 
 
     <!-- Custom fonts for this template-->
-    <link href="../assets/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
+    <link href="<?=  BASE_PATH; ?>assets/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    
     <!-- Custom styles for this template-->
-    <link href="../assets/css/sb-admin-2.min.css" rel="stylesheet">
-    <link href="../assets/css/sb-admin-2.css" rel="stylesheet">
-
+    <link href="<?=  BASE_PATH; ?>assets/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="<?=  BASE_PATH; ?>assets/css/sb-admin-2.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?=  BASE_PATH; ?>assets/bootstrap/scss/bootstrap.css">
 
 </head>
 
@@ -40,8 +42,12 @@
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-laugh-wink"></i>
             </div>
-            <div class="sidebar-brand-text mx-3">Les Moiss' Admin </sup></div>
+            <div class="sidebar-brand-text mx-3">Star'Island Admin </sup></div>
         </a>
+
+        <?php     if (connect()):           ?>
+            <a href="<?=  BASE_PATH.'?a=dis'; ?>" class="btn btn-warning">Déconnexion</a>
+            
 
         <!-- Divider -->
         <hr class="sidebar-divider my-0">
@@ -56,95 +62,94 @@
         <div class="sidebar-heading">
             gestion
         </div>
+        
+
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-               aria-expanded="true" aria-controls="collapseUtilities">
+            <a class="nav-link collapsed" href="<?=  BASE_PATH.'back/media_type.php/'; ?>" >
                 <i class="fas fa-fw fa-wrench"></i>
-                <span>Gestion pastille</span>
+                <span>Type Media</span>
             </a>
-            <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                 data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="dropdown-item" href="">Gestion Commande</a>
-                </div>
-            </div>
         </li>
 
         <hr class="sidebar-divider d-none d-md-block">
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="" >
+            <a class="nav-link collapsed" href="<?=  BASE_PATH.'back/page.php/'; ?>" >
                 <i class="fas fa-fw fa-wrench"></i>
-                <span>Gestion caroussel</span>
+                <span>Page</span>
             </a>
         </li>
 
 
         <hr class="sidebar-divider">
         <li class="nav-item">
-            <a class="nav-link collapsed" href="" >
+            <a class="nav-link collapsed" href="<?=  BASE_PATH.'back/content.php/'; ?>" >
                 <i class="fas fa-fw fa-wrench"></i>
-                <span>Gestion carte resto</span>
+                <span>Content</span>
             </a>
         </li>
 
 
         <hr class="sidebar-divider">
         <li class="nav-item">
-            <a class="nav-link collapsed" href="" >
+            <a class="nav-link collapsed" href="<?=  BASE_PATH.'back/media.php/'; ?>" >
                 <i class="fas fa-fw fa-wrench"></i>
-                <span>Gestion formule</span>
+                <span>Media</span>
             </a>
         </li>
 
 
         <hr class="sidebar-divider">
         <li class="nav-item">
-            <a class="nav-link collapsed" href="" >
+            <a class="nav-link collapsed" href="<?=  BASE_PATH.'back/comment.php/'; ?>" >
                 <i class="fas fa-fw fa-wrench"></i>
-                <span>Gestion bar / cave</span>
+                <span>Comment</span>
             </a>
         </li>
 
 
         <hr class="sidebar-divider">
         <li class="nav-item">
-            <a class="nav-link collapsed" href="" >
+            <a class="nav-link collapsed" href="<?=  BASE_PATH.'back/event.php/'; ?>" >
                 <i class="fas fa-fw fa-wrench"></i>
-                <span>Gestion navigation</span>
+                <span>Event</span>
             </a>
         </li>
 
 
         <hr class="sidebar-divider">
         <li class="nav-item">
-            <a class="nav-link collapsed"   href=""   >
+            <a class="nav-link collapsed"   href="<?=  BASE_PATH.'back/team.php/'; ?>"   >
 
                 <i class="fas fa-fw fa-wrench"></i>
-                <span>Gestion evènements</span>
+                <span>Team</span>
             </a>
         </li>
 
 
-        <hr class="sidebar-divider">
-        <li class="nav-item">
+        <!-- <hr class="sidebar-divider">
+       <li class="nav-item">
             <a class="nav-link collapsed" href=""  >
                 <i class="fas fa-fw fa-wrench"></i>
                 <span>Gestion newsletter</span>
             </a>
-        </li>
-
-
-        <hr class="sidebar-divider">
+        </li> -->
 
 
 
-        <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item ">
+         <!-- <hr class="sidebar-divider">
+
+       Nav Item - Pages Collapse Menu -->
+        <!-- <li class="nav-item ">
             <a class="nav-link collapsed" href="" >
                 <i class="fas fa-fw fa-folder"></i>
                 <span>Gestion abonnés</span>
-            </a>
+            </a> -->
+
+
+
+
+
 <!--            <div id="collapsePages" class="collapse show" aria-labelledby="headingPages"-->
 <!--                 data-parent="#accordionSidebar">-->
 <!--                <div class="bg-white py-2 collapse-inner rounded">-->
@@ -160,7 +165,12 @@
 <!--            </div>-->
         </li>
 
-
+        <?php     else:           ?>
+                <div id="outLink">
+            <a href="<?=  BASE_PATH.'security/login.php'; ?>" class="btn btn-success">LOGIN</a>
+            <a href="<?=  BASE_PATH.'security/register.php'; ?>"class="btn btn-info">REGISTER</a>
+            </div>
+            <?php        endif;        ?>
 
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">

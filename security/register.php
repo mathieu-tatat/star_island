@@ -1,5 +1,5 @@
 <?php require_once '../config/function.php';
-require_once '../inc/header.inc.php';
+
 
 if (!empty($_POST)) {
 $error=false;
@@ -21,7 +21,7 @@ $error=false;
          $error=true;
 
     }else{
-        $user=execute("SELECT * FROM user WHERE email=:email",array(
+        $user=execute("SELECT * FROM user WHERE email_user=:email",array(
                ':email'=>$_POST['email']
         ));
 
@@ -54,43 +54,43 @@ $error=false;
 
     }
 
-    if (empty($_FILES['picture_profil']['name'])){
-          $picture='Photo de profil obligatoire';
-          $error=true;
+    // if (empty($_FILES['picture_profil']['name'])){
+    //       $picture='Photo de profil obligatoire';
+    //       $error=true;
 
-    }else{
-        $picture="";
-        $formats=['image/png', 'image/jpg', 'image/jpeg', 'image/gif', 'image/webp'];
-        if (!in_array($_FILES['picture_profil']['type'],$formats )){
-            $picture.="Les formats autorisés sont: 'image/png', 'image/jpg', 'image/jpeg', 'image/gif', 'image/webp'<br>";
-            $error=true;
+    // }else{
+    //     $picture="";
+    //     $formats=['image/png', 'image/jpg', 'image/jpeg', 'image/gif', 'image/webp'];
+    //     if (!in_array($_FILES['picture_profil']['type'],$formats )){
+    //         $picture.="Les formats autorisés sont: 'image/png', 'image/jpg', 'image/jpeg', 'image/gif', 'image/webp'<br>";
+    //         $error=true;
 
-        }
-        if ($_FILES['picture_profil']['size'] > 2000000){
-            $picture.="Taille maximale autorisée de 2M";
-            $error=true;
-        }
+    //     }
+    //     if ($_FILES['picture_profil']['size'] > 2000000){
+    //         $picture.="Taille maximale autorisée de 2M";
+    //         $error=true;
+    //     }
 
-    }  // fin contrôle de formulaire
+    // }  // fin contrôle de formulaire
 
     // condition de traitement du formulaire (si il n'y a pas d'erreur)
 
     if (!$error){
   // on renomme la photo
-        $picture_bdd='upload/'.uniqid().date_format(new DateTime(),'d_m_Y_H_i_s').$_FILES['picture_profil']['name'];
+        // $picture_bdd='upload/'.uniqid().date_format(new DateTime(),'d_m_Y_H_i_s').$_FILES['picture_profil']['name'];
  // on la copie dans le dossier d'upload
-        copy($_FILES['picture_profil']['tmp_name'],'../assets/'.$picture_bdd);
+        // copy($_FILES['picture_profil']['tmp_name'],'../assets/'.$picture_bdd);
 
         // on hash le mot de passe
         $mdp=password_hash($_POST['password'], PASSWORD_DEFAULT);
 
         // on lance l'insertion
 
-        $result=execute("INSERT INTO user (nickname, email, password,picture_profil, role) VALUES (:nickname, :email, :password,:picture_profil, :role)", array(
+        $result=execute("INSERT INTO user (nickname, email_user, password_user, role) VALUES (:nickname, :email, :password, :role)", array(
               ':nickname'=>$_POST['nickname'],
               ':email'=>$_POST['email'],
               ':password'=>$mdp,
-              ':picture_profil'=>$picture_bdd,
+            //   ':picture_profil'=>$picture_bdd,
               ':role'=>'ROLE_USER'
 
         ), 'ggg');
@@ -113,7 +113,7 @@ $error=false;
 
 }// fin !empty($_POST)
 
-
+require_once '../inc/backheader.inc.php';
 ?>
 
 <?=  $unique_email ?? ""; ?>
@@ -133,7 +133,7 @@ $error=false;
         <input name="password" type="password" class="form-control" id="exampleInputPassword1">
         <small class="text-danger"><?= $password  ?? ""; ?></small>
     </div>
-    <div class="mb-3">
+    <!--<div class="mb-3">
         <label for="picture_profil" class="form-label">Photo de profil</label>
         <input onchange="loadFile()" name="picture_profil" type="file" class="form-control" id="picture_profil">
         <small class="text-danger"><?= $picture ?? ""; ?></small>
@@ -144,7 +144,7 @@ $error=false;
     <div class="mb-3 form-check">
         <input type="checkbox" class="form-check-input" id="exampleCheck1">
         <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div>
+    </div>-->
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
@@ -161,4 +161,4 @@ $error=false;
     }
 </script>
 
-<?php require_once '../inc/footer.inc.php'; ?>
+<?php require_once '../inc/backfooter.inc.php'; ?>

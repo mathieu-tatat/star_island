@@ -20,6 +20,8 @@ require_once "config/init.php";
     <link rel="stylesheet" href="<?=  BASE_PATH; ?>assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="<?=  BASE_PATH; ?>assets/css/owl.theme.default.css">
     <link rel="stylesheet" href="<?=  BASE_PATH; ?>assets/css/magnific-popup.css">
+    <link href="<?=  BASE_PATH; ?>assets/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
 
     <link type="text/css" rel="stylesheet" href="<?=  BASE_PATH; ?>assets/bootstrap/scss/bootstrap.css">
     <link type="text/css" rel="icon" href="<?=  BASE_PATH; ?>assets/upload/starisland.png" type="icon star'island">
@@ -64,9 +66,14 @@ require_once "config/init.php";
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">ADMIN</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="<?=  BASE_PATH.'back/userList.php'; ?>">Gestion utilisateur</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>                        
+                        <a class="nav-link text-dark" href="<?=  BASE_PATH.'back/'; ?>">Back-o</a>
+                        <a class="nav-link text-dark" href="<?=  BASE_PATH.'security/register.php'; ?>">register</a>
+                        <a class="nav-link text-dark" href="<?=  BASE_PATH.'security/login.php'; ?>">login</a>
+                        <a class="nav-link text-dark" href="<?=  BASE_PATH.'back/userList.php'; ?>">Gestion utilisateur</a>
+                        <a class="nav-link text-dark" href="#">Another action</a>
+                        <a class="nav-link text-dark" href="#">Something else here</a> 
+                        
+                       
                       
 
                         <div class="dropdown-divider"></div>
