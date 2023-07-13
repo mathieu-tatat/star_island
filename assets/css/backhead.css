@@ -10,3 +10,70 @@ margin: auto;
 #descr{
     width: 33% !important;
 }
+
+#monBouton{
+    margin: 20px;
+}
+
+#imgTable{
+    display: none; /* Cacher l'élément par défaut */
+    justify-content: center;
+    gap:30px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 20px;
+    border: 1px solid;
+    margin: 20px;
+    height: 420px;
+    overflow: scroll;
+}
+
+.gestionImg{
+width: 200px;
+height:200px;
+object-fit: cover;
+}
+
+#id_type_media{
+    width: 20% !important;
+}
+.tableau{
+    width: 90% !important;
+}
+.xdel{
+    position: relative;
+    top: -195px;
+    left: 168px;
+    background-color: white;
+    width: 23px;
+    border-radius: 60%;
+    text-align: center;
+}
+
+.xdel:hover{
+    
+    
+background-color: red;
+color: antiquewhite;
+}
+
+
+.cardDel{
+    height: 214px;
+    text-decoration: none;
+    color: red;
+    display: flex;
+    justify-content: center ;
+}
+
+.cardDel:hover{
+    height: 214px;
+    text-decoration: none;
+    color: red;
+}
+
+.containBackComment{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}

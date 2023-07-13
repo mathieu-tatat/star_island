@@ -1,16 +1,16 @@
 .barDown{
     display: flex;
     justify-content: center;
-    width: 30%;
+    width: 38%;
     margin: auto;
-    gap: 10px;
+    gap: 5%;
     align-items: center;
     position: fixed;
-    left: 35%;
-    top:89%;
+    left: 31%;
+    top: 89%;
     border-radius: 35px;
     height: 50px;
-    opacity:1.5;
+    opacity: 1.5;
     z-index: 20;
    
 } 
@@ -42,7 +42,7 @@ section{
 
 span{
     position: relative;
-    top:20px;
+    top:15px;
 }
 
 div:hover section{
@@ -74,12 +74,12 @@ div:hover .barDown{
 
 .leftSocials{
 position: relative;
-left: -1px;
+left: 20%;
 }
 
 .rightSocials{
 position: relative;
-left: 6px;
+left:3%;
 }
 
 @media only screen and (min-device-width : 350px) and (max-device-width : 801px) {

@@ -162,3 +162,34 @@ require_once '../inc/backheader.inc.php';
 </script>
 
 <?php require_once '../inc/backfooter.inc.php'; ?>
+
+
+
+
+
+
+if (empty($_FILES['title_media']['name'])){
+          $picture='Média obligatoire';
+          $error=true;
+
+    }else{
+        $picture="";
+        $formats=['image/png', 'image/jpg', 'image/jpeg', 'image/gif', 'image/webp','image/svg'];
+        if (!in_array($_FILES['title_media']['type'],$formats )){
+            $picture.="Les formats autorisés sont: 'image/png', 'image/jpg', 'image/jpeg', 'image/gif', 'image/webp' 'image/svg' <br>";
+            $error=true;
+
+        }
+        if ($_FILES['title_media']['size'] > 2000000){
+            $picture.="Taille maximale autorisée de 2M";
+            $error=true;
+        }
+
+    }  // fin contrôle de formulaire
+
+
+
+
+    $picture_bdd='upload/'.uniqid().date_format(new DateTime(),'d_m_Y_H_i_s').$_FILES['title_media']['name'];
+
+copy($_FILES['title_media']['tmp_name'],'../assets/'.$picture_bdd);

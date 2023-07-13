@@ -10,11 +10,12 @@
     margin-top: -50px;
     background-repeat: no-repeat;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%,rgba(255,255,255,0) 75%,rgb(19, 19, 19) 100%),url("../upload/gta_decors5.png");    
+    background-size:cover ;
 }   
 
 .fondIndexBas{
     background-image: linear-gradient(to bottom, rgb(19, 19, 19) 5%,rgba(19,19,19,0.75) 25%,rgba(255,255,255,0) 100%),url("../upload/gta_decors2.png");
-   
+    background-size:cover ;
     background-repeat: no-repeat;
     padding-top:3%;
     padding-bottom: 3%
@@ -24,9 +25,9 @@
     font-size: 60px;
     display: flex;
     margin: auto;
-    width: 40%;
+    width: fit-content;
     text-align: center;
-    padding-top: 5%;
+    padding-top: 10%;
     line-height: normal;
 }
 
@@ -281,7 +282,18 @@
   input {
     display: none;
   }
-   
+
+  .jour{
+    color: gold;
+    font-size: 1.5rem;
+  }
+
+  .nuit{
+    color: black;
+    font-size: 1.5rem;
+  }
+
+
   .etoile {
     color: grey;
     font-size: 3em;
@@ -396,6 +408,8 @@
     flex-direction: column;
     padding: 2% !important;
     justify-content: center;
+    width:85%;
+    margin: auto;
   }
 
   .validerAvis{
@@ -415,7 +429,7 @@
   #com{
     color: black;
     border-radius: 10px;
-    width: 70%;
+    width: 100%;
     display: flex;
     margin: auto;
     margin-bottom: 10px;
@@ -425,7 +439,7 @@
 
   .leftCom{
     width: 45%;
-    height:90px;
+    height:140px;
     background-color: rgba(250, 235, 215, 0.6);
     color: black;
     border-radius: 30px 30px 0px 30px;
@@ -438,7 +452,7 @@
 
   .rightCom{
     width: 45%;
-    height:90px;
+    height:140px;
     background-color: rgba(250, 235, 215, 0.6);
     color: black;
     border-radius: 30px 30px 30px 0px;
@@ -450,15 +464,17 @@
   }
 
   .displayComments{
-    overflow-y: hidden;
-    overflow-x: hidden;
-    width: 50%;
+    overflow: scroll;
+    width: 70%;
     display: flex;
     flex-direction: column;
     gap :10px;
-    margin-left: 25%;
+    margin: auto;
     margin-top: -5%;
-   
+    height: 600px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    border-radius: 6px;
+    padding: 20px;
   }
 
   .imgComAvatarLeft{
@@ -486,7 +502,6 @@
     display: flex;
     flex-direction: column;
     width: 80%;
-    align-items: start;
     margin-left: 15px;
   }
 
@@ -523,22 +538,36 @@
   .dark {
     color: black;
   }
+  .policeComPostLeft{
+    color: black;
+    width: 100%;
+    overflow: scroll;
+    font-size: 18px;
+    margin-bottom: 0px;
+  }
 
   .policePostLeft{
-    color: black;
-    width: 80%;
-    margin-left: 15px;
-    margin-top: 10px;
+    color: gray;
+    width: 90%;
     overflow: scroll;
-    overflow: hidden;
-    font-size: 20px;
+    margin-bottom: 0px;
+    font-size: 18px;
   }
+
   .datePostLeft{
     color: rgb(84, 82, 82) ;
-    margin-left: 15px;
+    margin-left: 60%;;
     width: 80%;
+    margin-top: 20px;
 
   }
+
+.box_pseudo_date{
+display: flex;
+flex-direction: column;
+width: 100%;
+height: 70px;
+}
 
   .policePostRight{
     color: black;
@@ -549,12 +578,31 @@
     overflow: hidden;
     font-size: 20px;
   }
+
   .datePostRight{
     color: rgb(84, 82, 82) ;
     margin-right: -80px;
     width: 80%;
   }
 
+  #user_pseudo{
+    color: black;
+    border-radius: 10px;
+    width: 25%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+    background-color:rgba(250, 235, 215, 0.6);
+    border: 1px solid black;
+  }
+
+  .divPseudo{
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    margin:auto;
+    width: 82%;
+  }
   /* ############# MOBILE media queries  */
 
   @media only screen and (min-device-width : 350px) and (max-device-width : 640px) {
@@ -697,12 +745,19 @@
     }
 
     #com {
-      width: 90%;
+      width: 100%;
     }
 
     .validerAvis {
       width: 20%;
     }
-
-    
+    .formComment{
+      width: 96%;
+    }
+    .divPseudo{
+      width: 95%;
+    }
+    #user_pseudo{
+      width: 50%;
+    }
 }

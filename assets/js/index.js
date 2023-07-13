@@ -82,22 +82,27 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   
+   
 
-    let rate = 0;
+
+    var rate = 0;
     let stars = document.querySelectorAll('.avis');
+    let rating=document.getElementById('rating');
      
     stars.forEach((star, id) => {
       star.addEventListener('click', (elem) => {
         rate = (id + 1);
+        rating.value=rate;
         elem.target.classList.remove('noir');
         elem.target.classList.add('or');
+        
       });
       star.addEventListener('mouseenter', (elem) => {
         let cible = elem.target.classList;
         cible.remove('gris');
         cible.remove('or');
         cible.add('noir');
-         
+        console.log(rate);
         for (let i = 0; i < stars.length; i++) {
           let classes = stars[i].classList;
           if (i < id) {
@@ -114,7 +119,9 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
 
-    
+    console.log(rate);
+
+
     let rate1 = 0;
     let stars1 = document.querySelectorAll('.avis1');
      

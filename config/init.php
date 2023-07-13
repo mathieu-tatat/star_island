@@ -19,5 +19,27 @@ const CONFIG=[
 
 ];
 
+
+// const CONFIG=[
+//     'db'=>[
+//         'HOST'=>'localhost',
+//         'PORT'=>'3306',
+//         'NAME'=>'dece5725_matbdd',
+//         'USER'=>'dece5725_cezdigitevogue',
+//         'PWD'=>'Cezevogue1986@'
+
+//     ],
+//     'app'=>[
+//         'name'=>'star_island',
+//         'projecturl'=>'http://mathieu.cezdigit.com/'
+//     ]
+
+// ];
+
+
 const BASE_PATH='/star_island/';
+
+//  fichier de config de l'app
+
+
 

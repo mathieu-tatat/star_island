@@ -9,8 +9,73 @@
                 exit();
 
 
-            } 
+                
+            }  
+
+            $joinComment_Medias=execute(
+                "SELECT c.*, m.* FROM comment c
+                INNER JOIN media m
+                on c.id_media = m.id_media ORDER BY id_comment DESC")->fetchAll(PDO::FETCH_ASSOC);
+            $comments = execute("SELECT * FROM comment")->fetchAll(PDO::FETCH_ASSOC);
+            $medias = execute("SELECT * FROM media")->fetchAll(PDO::FETCH_ASSOC);
+           
+            if (!empty($_POST)) {  
+
+            $joinComment_Medias=execute(
+               "SELECT c.*, m.* FROM comment c
+               INNER JOIN media m
+               on c.id_media = m.id_media ORDER BY id_comment DESC")->fetchAll(PDO::FETCH_ASSOC);
+           
+            
+               // Récupération des valeurs du formulaire
+               $pseudo = $_POST['user_pseudo'];
+               $commentaire = $_POST['user_avis'];
+               $rate=(int)$_POST['rating'];
+
+               $avatars=execute("SELECT m.* FROM media m 
+               INNER JOIN  media_type mt 
+               ON m.id_media_type=mt.id_media_type 
+               WHERE mt.title_media_type='avatar'")->fetchAll(PDO::FETCH_ASSOC);
+               $choice=array_rand($avatars, 1);
+               $avatarIdMedia = $avatars[$choice]['id_media'];
+                
+
+                   if ( empty($pseudo) || empty($commentaire || empty($_POST['avisEtoile'])) ) {  
+                      
+                       $error = 'Ces champs sont obligatoire';
+                  
+                   }else{
+                      
+                   // Insertion des données dans la base de données (utilisez la méthode appropriée pour votre base de données)
+                   // Exemple avec MySQLi :
+                   execute("INSERT INTO comment (rating_comment, comment_text, publish_date_comment, nickname_comment, activated, id_media) 
+                   VALUES (:rating_comment, :comment_text, (NOW()), :nickname_comment, 0, :id_media)",array(
+                       ':rating_comment' => $rate,
+                       ':comment_text'=> $commentaire,
+                       ':nickname_comment'=> $pseudo,
+                       ':id_media'=> $avatarIdMedia
+                       
+           
+                   ));
+                   
+           
+                   // Réponse réussie ou redirection vers une autre page
+                   // Exemple de redirection :
+                   header("Location:  #"); 
+                    exit();
+                   }
+                
+               }
+
+
+
+
+
+
+
+           
             require_once 'inc/header.inc.php';
+             require_once 'comments.php';
          ?>
 <main>
 
@@ -102,7 +167,7 @@
 
                     </div>
                     
-                    <form method="post" action="#">
+                    <form method="post" >
                         <input type="radio" name="note"> <span class="etoile">★</span>
                         <input type="radio" name="note"> <span class="etoile">★</span>
                         <input type="radio" name="note"> <span class="etoile">★</span>
@@ -110,7 +175,7 @@
                         <input type="radio" name="note"> <span class="etoile">★</span>
                     </form> 
 
-                    <form action="#" class="formCom" method="post">
+                    <form  class="formCom" method="post">
                         <div class="formCom">
                             <textarea id="msg" name="user_message" placeholder="Écrire votre commentaire"></textarea>
                             <button type="submit" class="validerCom">Publier</button>
@@ -127,97 +192,57 @@
 
     </div>  
     
-<!-- seconde parie page index tchat -->
+<!-- seconde partie page index tchat -->
 
                
 
     <div class=fondIndexBas>
-
                 <div class="displayComments">
+                    <?php $isLeftCom = true; // Variable de contrôle initialisée à true
+                    foreach($joinComment_Medias as $comment_media):?>
+                    <?php if($comment_media['activated'] == 1 || $comment_media['activated'] == 0 ){ ?>
+                        <div class="<?php echo $isLeftCom ? 'leftCom' : 'rightCom'; ?>">                       
+                           
 
-                        <div class="leftCom">
-                            <div>
-                                <img class="imgComAvatarLeft" src="assets/upload/avatar4.png" alt="photo avatar" >
+                            <div>  
+                                <img class="imgComAvatarLeft" src="<?=  BASE_PATH.'assets/'.$comment_media['title_media']; ?>" alt="photo avatar">
                             </div>
 
-                            <div class="formPostedLeft"  >
-                                <form method="post" action="#">
-                                    <input type="radio" name="avisEtoile"> <span class="avis1">★</span>
-                                    <input type="radio" name="avisEtoile"> <span class="avis1">★</span>
-                                    <input type="radio" name="avisEtoile"> <span class="avis1">★</span>
-                                    <input type="radio" name="avisEtoile"> <span class="avis1">★</span>
-                                    <input type="radio" name="avisEtoile"> <span class="avis1">★</span>
+                            <div class="formPostedLeft">
+                                <form method="post" >
+                                    <?php if($comment_media['rating_comment'] == 1):?>
+                                            <span class="jour">★</span><span class="nuit">★★★★</span>
+                                    <?php endif;
+                                        if($comment_media['rating_comment'] == 2):?>
+                                            <span class="jour">★★</span><span class="nuit">★★★</span>
+                                    <?php endif;
+                                        if($comment_media['rating_comment'] == 3):?>
+                                            <span class="jour">★★★</span><span class="nuit">★★</span>
+                                    <?php endif;
+                                        if($comment_media['rating_comment'] == 4):?>
+                                            <span class="jour">★★★★</span><span class="nuit">★</span>
+                                    <?php endif;
+                                       if($comment_media['rating_comment'] == 5):?>
+                                            <span class="jour">★★★★★</span>
+                                    <?php endif; ?>
+                                    
+                                     
                                 </form> 
-                                <p class="policePostLeft">super serveur gta rp </p>
-                                <p class="datePostLeft">Posté le 18/06/2023</p>
-
-                            </div>
-
-                        </div>
-
-                        <div class="rightCom">
+                                    <div class="box_pseudo_date">
+                                        <p class="policePostLeft"><?= "de :".$comment_media['nickname_comment']; ?></p>
+                                        <p class="policecomPostLeft"><?= $comment_media['comment_text']; ?> </p>
+                                    </div>
+                                <p class="datePostLeft">Posté le : <?= $comment_media['publish_date_comment']; ?></p>
                                
-                                <div class="formPostedRight"  >
-                                    <form method="post" action="#">
-                                        <input type="radio" name="avisEtoile"> <span class="avis1">★</span>
-                                        <input type="radio" name="avisEtoile"> <span class="avis1">★</span>
-                                        <input type="radio" name="avisEtoile"> <span class="avis1">★</span>
-                                        <input type="radio" name="avisEtoile"> <span class="avis1">★</span>
-                                        <input type="radio" name="avisEtoile"> <span class="avis1">★</span>
-                                    </form> 
-                                    <p class="policePostRight">super serveur gta rp </p>
-                                    <p class="datePostRight">Posté le 18/06/2023</p>
-
-                                </div>
-
-                                <div>
-                                    <img class="imgComAvatarRight" src="assets/upload/avatar3.png" alt="photo avatar" >
-                                </div>
-
-                        </div>
-
-                        <div class="leftCom">
-                            <div>
-                                <img class="imgComAvatarLeft" src="assets/upload/avatar2.png" alt="photo avatar" >
                             </div>
+                           
+                        </div> 
+                    
+                        <?php }; 
+                         $isLeftCom = !$isLeftCom; // Inversion de la variable de contrôle à chaque itération
+                        endforeach ; ?> 
 
-                            <div class="formPostedLeft"  >
-                                <form method="post" action="#">
-                                    <input type="radio" name="avisEtoile"> <span class="avis1">★</span>
-                                    <input type="radio" name="avisEtoile"> <span class="avis1">★</span>
-                                    <input type="radio" name="avisEtoile"> <span class="avis1">★</span>
-                                    <input type="radio" name="avisEtoile"> <span class="avis1">★</span>
-                                    <input type="radio" name="avisEtoile"> <span class="avis1">★</span>
-                                </form> 
-                                <p class="policePostLeft">super serveur gta rp </p>
-                                <p class="datePostLeft">Posté le 18/06/2023</p>
-
-                            </div>
-                        
-                        </div>
-
-                        <div class="rightCom">
-
-                                <div class="formPostedRight"  >
-                                    <form method="post" action="#">
-                                        <input type="radio" name="avisEtoile"> <span class="avis1">★</span>
-                                        <input type="radio" name="avisEtoile"> <span class="avis1">★</span>
-                                        <input type="radio" name="avisEtoile"> <span class="avis1">★</span>
-                                        <input type="radio" name="avisEtoile"> <span class="avis1">★</span>
-                                        <input type="radio" name="avisEtoile"> <span class="avis1">★</span>
-                                    </form> 
-                                    <p class="policePostRight">super serveur gta rp </p>
-                                    <p class="datePostRight">Posté le 18/06/2023</p>
-
-                                </div>
-        
-                                <div>
-                                    <img class="imgComAvatarRight" src="assets/upload/avatar1.png" alt="photo avatar" >
-                                </div>
-
-                         </div>
-                
-                    </div>
+                </div> 
 
 
                 <div class="containCommentaires">
@@ -226,7 +251,7 @@
 
                     </div>
                     
-                    <form method="post" class="formAvisCommentaires" action="#">
+                    <form method="post" class="formAvisCommentaires" >
                         <input type="radio" name="avisEtoile"> <span class="avis">★</span>
                         <input type="radio" name="avisEtoile"> <span class="avis">★</span>
                         <input type="radio" name="avisEtoile"> <span class="avis">★</span>
@@ -234,17 +259,27 @@
                         <input type="radio" name="avisEtoile"> <span class="avis">★</span>
                     </form> 
 
-                    <form action="#" class="formComment" method="post">
-                        <div class="formComment">
-                            <textarea id="com" name="user_avis" placeholder="Écrire votre commentaire"></textarea>
-                            <button type="submit" class="validerAvis">Publier</button>
+                    <form  class="formComment" method="post">
+                        <div class="divPseudo">
+                            <label for="user_pseudo" class="form-label">Pseudo:</label>
+                            <input type="text" id="user_pseudo" name="user_pseudo" placeholder="entrer votre pseudo">
                         </div>
-                        
+                        <div class="formComment">
+                            <input type="hidden" id="rating" value="1" name="rating">
+                            <label for="com" class="form-label">Commentaire:</label>
+                            <textarea id="com" style="display:flex; " name="user_avis" placeholder="Écrire votre commentaire"></textarea>
+                            <button type="submit" name="publish"class="validerAvis">Publier</button>
+                        </div>
+                        <div class="text-center">
+                        <small class="text-danger"><?= $error ?? ''; ?></small>
+                        </div>
                     </form>
 
                 </div>
 
-            
+            <script>
+   
+</script>
 
 
     </div>

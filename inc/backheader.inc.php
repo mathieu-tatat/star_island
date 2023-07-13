@@ -12,6 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
+    <link rel="stylesheet" href="../assets/css/backhead.css">
     <link type="text/css" rel="icon" href="<?=  BASE_PATH; ?>assets/upload/starisland.png" type="icon star'island">
     <meta name="author" content="">
     <title>Admin Star'Island</title>
@@ -65,7 +66,7 @@
         
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="<?=  BASE_PATH.'back/media_type.php/'; ?>" >
+            <a class="nav-link collapsed" href="<?=  BASE_PATH.'back/media_type.php'; ?>" >
                 <i class="fas fa-fw fa-wrench"></i>
                 <span>Type Media</span>
             </a>
@@ -74,7 +75,7 @@
         <hr class="sidebar-divider d-none d-md-block">
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="<?=  BASE_PATH.'back/page.php/'; ?>" >
+            <a class="nav-link collapsed" href="<?=  BASE_PATH.'back/page.php'; ?>" >
                 <i class="fas fa-fw fa-wrench"></i>
                 <span>Page</span>
             </a>
@@ -83,7 +84,7 @@
 
         <hr class="sidebar-divider">
         <li class="nav-item">
-            <a class="nav-link collapsed" href="<?=  BASE_PATH.'back/content.php/'; ?>" >
+            <a class="nav-link collapsed" href="<?=  BASE_PATH.'back/content.php'; ?>" >
                 <i class="fas fa-fw fa-wrench"></i>
                 <span>Content</span>
             </a>
@@ -92,7 +93,7 @@
 
         <hr class="sidebar-divider">
         <li class="nav-item">
-            <a class="nav-link collapsed" href="<?=  BASE_PATH.'back/media.php/'; ?>" >
+            <a class="nav-link collapsed" href="<?=  BASE_PATH.'back/media.php'; ?>" >
                 <i class="fas fa-fw fa-wrench"></i>
                 <span>Media</span>
             </a>
@@ -101,7 +102,7 @@
 
         <hr class="sidebar-divider">
         <li class="nav-item">
-            <a class="nav-link collapsed" href="<?=  BASE_PATH.'back/comment.php/'; ?>" >
+            <a class="nav-link collapsed" href="<?=  BASE_PATH.'back/comment.php'; ?>" >
                 <i class="fas fa-fw fa-wrench"></i>
                 <span>Comment</span>
             </a>
@@ -110,7 +111,7 @@
 
         <hr class="sidebar-divider">
         <li class="nav-item">
-            <a class="nav-link collapsed" href="<?=  BASE_PATH.'back/event.php/'; ?>" >
+            <a class="nav-link collapsed" href="<?=  BASE_PATH.'back/event.php'; ?>" >
                 <i class="fas fa-fw fa-wrench"></i>
                 <span>Event</span>
             </a>
@@ -119,7 +120,7 @@
 
         <hr class="sidebar-divider">
         <li class="nav-item">
-            <a class="nav-link collapsed"   href="<?=  BASE_PATH.'back/team.php/'; ?>"   >
+            <a class="nav-link collapsed"   href="<?=  BASE_PATH.'back/team.php'; ?>"   >
 
                 <i class="fas fa-fw fa-wrench"></i>
                 <span>Team</span>
